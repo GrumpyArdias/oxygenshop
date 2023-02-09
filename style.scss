@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 1px solid greenyellow;
+}
+body {
+  min-width: 320px;
+}
+header {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #08a6e4;
+  filter: drop-shadow(0, 0, 0, 0.29);
+  h1 {
+    font-weight: 300;
+    font-size: 32px;
+    font-family: "Raleway", sans-serif;
+    margin-left: 25px;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+    margin-right: 30px;
+  }
+}
