@@ -45,7 +45,7 @@ header img {
 }
 .sales button {
   font-family: "Open Sans", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   line-height: 22px;
   border-radius: 40px;
@@ -81,6 +81,7 @@ header img {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .whyUs .dailyEntries .redDot {
   background-color: #fb3b64;
@@ -117,6 +118,7 @@ header img {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .whyUs .seenProducts .blueDot {
   background-color: #08a6e4;
@@ -143,6 +145,7 @@ header img {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .whyUs .addedPost .greenDot {
   background-color: #55dfb4;
@@ -161,4 +164,135 @@ header img {
   margin-left: 45px;
   margin-bottom: 20px;
   max-width: 16%;
+}
+.whyUs .added-Post-p {
+  margin-bottom: 50px;
+}
+
+.beneficts {
+  display: flex;
+  background-color: #f7f7f7;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.beneficts .alwaysFirst {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 280px;
+  min-height: 80px;
+  margin-top: 15px;
+  font-size: 30px;
+  background-color: white;
+  border: 1px solid #e8e9ed;
+}
+.beneficts .alwaysFirst .img-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  position: relative;
+}
+.beneficts .alwaysFirst .img-wrap .bg-red-circunference {
+  background-color: #fb3b64;
+  min-width: 90px;
+  min-height: 90px;
+  border-radius: 41px;
+  transform: translate(179%, -1%) scale(75%) rotate(45deg);
+  position: relative;
+}
+.beneficts .alwaysFirst .img-wrap img {
+  position: relative;
+  transform: translate(-21%, 19%);
+}
+.beneficts .alwaysFirst h3 {
+  margin-top: 40px;
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+  font-weight: 400;
+}
+.beneficts .alwaysFirst p {
+  width: 80%;
+  text-align: left;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+.beneficts .yourShop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 280px;
+  min-height: 80px;
+  margin-top: 15px;
+  font-size: 30px;
+  background-color: white;
+  border: 1px solid #e8e9ed;
+}
+.beneficts .yourShop .img-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  position: relative;
+}
+.beneficts .yourShop .img-wrap .bg-blue-circunference {
+  background-color: #08a6e4;
+  min-width: 131px;
+  min-height: 131px;
+  border-radius: 50%;
+  transform: translate(65%, 16%) scale(99%);
+  position: relative;
+}
+.beneficts .yourShop .img-wrap img {
+  position: relative;
+  transform: translate(-25%, 19%);
+}
+.beneficts .yourShop h3 {
+  margin-top: 40px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-weight: 400;
+}
+.beneficts .yourShop p {
+  width: 80%;
+  text-align: left;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+.beneficts .increase-recognition {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 280px;
+  min-height: 80px;
+  margin-top: 15px;
+  font-size: 30px;
+  background-color: white;
+  border: 1px solid #e8e9ed;
+}
+.beneficts h3 {
+  margin-top: 40px;
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+  font-weight: 400;
+  margin-left: 10%;
+}
+.beneficts p {
+  width: 80%;
+  text-align: left;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.beneficts .greenDiv {
+  background-color: #55dfb4;
+  width: 99%;
+}
+.beneficts img {
+  transform: translate(-8%, 20%) scale(90%);
 }/*# sourceMappingURL=style.css.map */
