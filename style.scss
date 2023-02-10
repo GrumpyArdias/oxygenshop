@@ -7,13 +7,15 @@
 body {
   min-width: 320px;
 }
+
+//HEADER
 header {
   min-height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #08a6e4;
-  filter: drop-shadow(0, 0, 0, 0.29);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   h1 {
     font-weight: 300;
     font-size: 32px;
@@ -21,8 +23,50 @@ header {
     margin-left: 25px;
   }
 
-  .material-symbols-outlined {
-    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  img {
     margin-right: 30px;
   }
 }
+
+// FIRST CONTENT BLOCK
+.sales {
+  h2 {
+    font-size: 36px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+  }
+  p {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    line-height: 23px;
+    padding: 10px;
+  }
+
+  button {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 22px;
+    border-radius: 40px;
+    margin: 1rem 3rem;
+    padding: 1rem 3rem;
+    background-color: #08a6e4;
+    color: white;
+    border: 0;
+    box-shadow: 0 3px 10px rgb(7 172 230 / 0.2);
+  }
+  // Come back to this I need to make the image short themself
+  img {
+    min-width: 320px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+//SECON CONTENT BLOCK
