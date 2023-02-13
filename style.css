@@ -591,4 +591,41 @@ header img {
   color: white;
   border: 0;
   box-shadow: 0 3px 10px rgba(7, 172, 230, 0.2);
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 44px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+footer .footer-text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+}
+footer .footer-text h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 26px;
+  color: #08a6e4;
+  text-align: left;
+}
+footer .footer-text p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  color: #a5a5a5;
+  text-align: left;
+}
+footer .sm-logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 89px;
+  width: 30%;
 }/*# sourceMappingURL=style.css.map */
