@@ -275,24 +275,239 @@ header img {
   background-color: white;
   border: 1px solid #e8e9ed;
 }
-.beneficts h3 {
+.beneficts .increase-recognition h3 {
   margin-top: 40px;
   font-family: "Open Sans", sans-serif;
   text-align: left;
   font-weight: 400;
   margin-left: 10%;
 }
-.beneficts p {
+.beneficts .increase-recognition p {
   width: 80%;
   text-align: left;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   margin-bottom: 15px;
 }
-.beneficts .greenDiv {
+.beneficts .increase-recognition .greenDiv {
   background-color: #55dfb4;
-  width: 99%;
+  width: 100%;
 }
-.beneficts img {
+.beneficts .increase-recognition img {
   transform: translate(-8%, 20%) scale(90%);
+}
+
+.pricing {
+  display: flex;
+  flex-direction: column;
+}
+.pricing h3 {
+  text-align: center;
+  font-size: 36px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  margin-top: 25px;
+}
+.pricing .basic {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  max-width: 90%;
+  border: 1px solid #fb3b64;
+  border-radius: 18px;
+  margin: 14px 10%;
+}
+.pricing .basic .basic-price-wrap {
+  margin-top: 70px;
+  margin-left: 10%;
+}
+.pricing .basic .basic-price-wrap h4 {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  margin-bottom: -5px;
+}
+.pricing .basic .basic-price-wrap h2 {
+  font-size: 46px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  color: #fb3b64;
+  margin-bottom: 100px;
+}
+.pricing .basic table {
+  margin-top: 25px;
+  margin-right: 4%;
+  margin-left: 20px;
+  margin-bottom: 60px;
+}
+.pricing .basic table tbody {
+  margin-top: -10px;
+}
+.pricing .basic table tbody tr {
+  padding: 10px;
+}
+.pricing .basic table tbody tr td img {
+  padding-right: 10px;
+}
+.pricing .basic table tbody tr td p {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+}
+.pricing .basic-button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 22px;
+  min-width: 150px;
+  border-radius: 23px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  background-color: #eb476e;
+  color: white;
+  border: 0;
+  transform: translateY(-80%);
+  position: relative;
+}
+.pricing .shadow-wrap .profesional {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  border: 1px solid #07ace6;
+  border-radius: 18px;
+  margin: auto 3%;
+}
+.pricing .shadow-wrap .profesional .profesional-price-wrap {
+  margin-top: 70px;
+  margin-left: 5%;
+}
+.pricing .shadow-wrap .profesional .profesional-price-wrap h4 {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  margin-bottom: -5px;
+}
+.pricing .shadow-wrap .profesional .profesional-price-wrap h2 {
+  font-size: 46px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  color: #07ace6;
+  text-align: center;
+}
+.pricing .shadow-wrap .profesional .profesional-price-wrap p {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 12px;
+  margin-top: -5px;
+  font-weight: 700;
+  margin-bottom: 80px;
+}
+.pricing .shadow-wrap .profesional table {
+  margin-top: 25px;
+  margin-right: 2%;
+  margin-left: 20px;
+  margin-bottom: 50px;
+}
+.pricing .shadow-wrap .profesional table tbody {
+  margin-top: -10px;
+}
+.pricing .shadow-wrap .profesional table tbody tr {
+  padding: 10px;
+}
+.pricing .shadow-wrap .profesional table tbody tr td img {
+  padding-right: 10px;
+}
+.pricing .shadow-wrap .profesional table tbody tr td p {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+}
+.pricing .profesional-button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 22px;
+  min-width: 150px;
+  border-radius: 23px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  background-color: #07ace6;
+  color: white;
+  border: 0;
+  transform: translateY(-50%);
+  position: relative;
+}
+.pricing .premium {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  max-width: 90%;
+  border: 1px solid #55dfb4;
+  border-radius: 18px;
+  margin: 14px 10%;
+}
+.pricing .premium .basic-price-wrap {
+  margin-top: 56px;
+}
+.pricing .premium .basic-price-wrap h4 {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  margin-bottom: -5px;
+}
+.pricing .premium .basic-price-wrap h2 {
+  font-size: 46px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  color: #55dfb4;
+  text-align: center;
+}
+.pricing .premium .basic-price-wrap p {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 12px;
+  margin-top: -5px;
+  font-weight: 700;
+  margin-bottom: 90px;
+}
+.pricing .premium table {
+  margin-top: 25px;
+  margin-right: -3%;
+  margin-left: -14px;
+  margin-bottom: 60px;
+}
+.pricing .premium table tbody {
+  margin-top: -10px;
+}
+.pricing .premium table tbody tr {
+  padding: 10px;
+}
+.pricing .premium table tbody tr td img {
+  padding-right: 10px;
+}
+.pricing .premium table tbody tr td p {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+}
+.pricing .premium-button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 22px;
+  min-width: 150px;
+  border-radius: 23px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  background-color: #55dfb4;
+  color: white;
+  border: 0;
+  transform: translateY(-81%);
+  position: relative;
 }/*# sourceMappingURL=style.css.map */

@@ -292,27 +292,263 @@ header {
     font-size: 30px;
     background-color: white;
     border: 1px solid #e8e9ed;
+    h3 {
+      margin-top: 40px;
+      font-family: "Open Sans", sans-serif;
+      text-align: left;
+      font-weight: 400;
+      margin-left: 10%;
+    }
+    p {
+      width: 80%;
+      text-align: left;
+      font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    .greenDiv {
+      background-color: #55dfb4;
+      width: 100%;
+    }
+    img {
+      transform: translate(-8%, 20%) scale(90%);
+    }
   }
+}
+// FOURTH BLOCK
+.pricing {
+  display: flex;
+  flex-direction: column;
 
   h3 {
-    margin-top: 40px;
-    font-family: "Open Sans", sans-serif;
-    text-align: left;
+    text-align: center;
+    font-size: 36px;
+    font-family: "Raleway", sans-serif;
     font-weight: 400;
-    margin-left: 10%;
+    margin-top: 25px;
   }
-  p {
-    width: 80%;
-    text-align: left;
+  .basic {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    max-width: 90%;
+    border: 1px solid #fb3b64;
+    border-radius: 18px;
+    margin: 14px 10%;
+
+    .basic-price-wrap {
+      margin-top: 70px;
+      margin-left: 10%;
+
+      h4 {
+        font-size: 20px;
+        font-weight: 700;
+        font-family: "Raleway", sans-serif;
+        text-align: center;
+        margin-bottom: -5px;
+      }
+      h2 {
+        font-size: 46px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        color: #fb3b64;
+        margin-bottom: 100px;
+      }
+    }
+    table {
+      margin-top: 25px;
+      margin-right: 4%;
+      margin-left: 20px;
+      margin-bottom: 60px;
+
+      tbody {
+        margin-top: -10px;
+        tr {
+          padding: 10px;
+          td {
+            img {
+              padding-right: 10px;
+            }
+            p {
+              font-size: 14px;
+              font-family: "Open Sans", sans-serif;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .basic-button {
     font-family: "Open Sans", sans-serif;
-    font-size: 14px;
-    margin-bottom: 15px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 22px;
+    min-width: 150px;
+    border-radius: 23px;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    background-color: #eb476e;
+    color: white;
+    border: 0;
+    transform: translateY(-80%);
+    position: relative;
   }
-  .greenDiv {
+  .shadow-wrap {
+    .profesional {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-content: center;
+
+      border: 1px solid #07ace6;
+      border-radius: 18px;
+      margin: auto 3%;
+
+      .profesional-price-wrap {
+        margin-top: 70px;
+        margin-left: 5%;
+
+        h4 {
+          font-size: 20px;
+          font-weight: 700;
+          font-family: "Raleway", sans-serif;
+          text-align: center;
+          margin-bottom: -5px;
+        }
+        h2 {
+          font-size: 46px;
+          font-family: "Open Sans", sans-serif;
+          font-weight: 300;
+          color: #07ace6;
+
+          text-align: center;
+        }
+        p {
+          margin-bottom: 50px;
+          text-align: center;
+          font-size: 12px;
+          margin-top: -5px;
+          font-weight: 700;
+          margin-bottom: 80px;
+        }
+      }
+      table {
+        margin-top: 25px;
+        margin-right: 2%;
+        margin-left: 20px;
+        margin-bottom: 50px;
+
+        tbody {
+          margin-top: -10px;
+          tr {
+            padding: 10px;
+            td {
+              img {
+                padding-right: 10px;
+              }
+              p {
+                font-size: 14px;
+                font-family: "Open Sans", sans-serif;
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .profesional-button {
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 22px;
+    min-width: 150px;
+    border-radius: 23px;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    background-color: #07ace6;
+    color: white;
+    border: 0;
+    transform: translateY(-50%);
+    position: relative;
+  }
+
+  .premium {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    max-width: 90%;
+    border: 1px solid #55dfb4;
+    border-radius: 18px;
+    margin: 14px 10%;
+
+    .basic-price-wrap {
+      margin-top: 56px;
+      h4 {
+        font-size: 20px;
+        font-weight: 700;
+        font-family: "Raleway", sans-serif;
+        text-align: center;
+        margin-bottom: -5px;
+      }
+      h2 {
+        font-size: 46px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        color: #55dfb4;
+
+        text-align: center;
+      }
+      p {
+        margin-bottom: 50px;
+        text-align: center;
+        font-size: 12px;
+        margin-top: -5px;
+        font-weight: 700;
+        margin-bottom: 90px;
+      }
+    }
+    table {
+      margin-top: 25px;
+      margin-right: -3%;
+      margin-left: -14px;
+      margin-bottom: 60px;
+
+      tbody {
+        margin-top: -10px;
+        tr {
+          padding: 10px;
+          td {
+            img {
+              padding-right: 10px;
+            }
+            p {
+              font-size: 14px;
+              font-family: "Open Sans", sans-serif;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+  .premium-button {
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 22px;
+    min-width: 150px;
+    border-radius: 23px;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
     background-color: #55dfb4;
-    width: 99%;
-  }
-  img {
-    transform: translate(-8%, 20%) scale(90%);
+    color: white;
+    border: 0;
+    transform: translateY(-81%);
+    position: relative;
   }
 }
