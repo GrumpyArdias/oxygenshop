@@ -11,7 +11,7 @@ body {
 header {
   min-height: 70px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   color: #08a6e4;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
@@ -20,28 +20,31 @@ header h1 {
   font-weight: 300;
   font-size: 32px;
   font-family: "Raleway", sans-serif;
-  margin-left: 25px;
+  margin-left: -5%;
+  max-width: 90%;
 }
-header img {
-  margin-right: 30px;
+header button {
+  align-items: center;
+  margin-right: -5%;
+  border: none;
 }
 
 .sales h2 {
   font-size: 36px;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  width: 100%;
+  max-width: 90%;
   text-align: center;
-  margin-top: 60px;
+  margin: 5% auto;
 }
 .sales p {
-  width: 100%;
-  text-align: center;
-  margin-top: 10px;
+  max-width: 90%;
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   line-height: 23px;
+  text-align: center;
   padding: 10px;
+  margin: 5% auto;
 }
 .sales button {
   font-family: "Open Sans", sans-serif;
@@ -49,12 +52,13 @@ header img {
   font-weight: bold;
   line-height: 22px;
   border-radius: 40px;
-  margin: 1rem 3rem;
+  margin: 0.75rem;
   padding: 1rem 3rem;
   background-color: #08a6e4;
   color: white;
   border: 0;
   box-shadow: 0 3px 10px rgba(7, 172, 230, 0.2);
+  transform: translate(20%);
 }
 .sales img {
   width: 100%;
@@ -69,6 +73,7 @@ header img {
   flex-wrap: wrap;
 }
 .whyUs h2 {
+  max-width: 80%;
   margin-top: 30px;
   text-align: center;
   font-size: 30px;
@@ -77,11 +82,12 @@ header img {
   font-family: "Raleway", sans-serif;
 }
 .whyUs .dailyEntries {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-bottom: 3%;
 }
 .whyUs .dailyEntries .redDot {
   background-color: #fb3b64;
@@ -89,17 +95,16 @@ header img {
   min-width: 60px;
   min-height: 60px;
   margin-top: 25px;
-  position: absolute;
+  position: relative;
   z-index: 1;
-  margin-bottom: 5%;
+  transform: translate(35%);
+  margin-bottom: 10px;
 }
 .whyUs .dailyEntries img {
   margin-top: 27px;
-  margin-bottom: 20px;
   position: relative;
   z-index: 2;
-  margin-left: 47px;
-  max-width: 12%;
+  transform: translate(-18%, -18%) scale(85%);
 }
 .whyUs h3 {
   font-family: "Raleway", sans-serif;
@@ -114,7 +119,7 @@ header img {
   font-size: 16px;
 }
 .whyUs .seenProducts {
-  width: 100%;
+  max-width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,22 +131,21 @@ header img {
   min-width: 60px;
   min-height: 60px;
   margin-top: 20px;
-  position: absolute;
+  position: relative;
   z-index: 1;
-  margin-bottom: 5%;
+  transform: translate(54%);
 }
 .whyUs .seenProducts img {
   margin-top: 27px;
   position: relative;
   z-index: 2;
-  margin-left: 40px;
-  margin-bottom: 25px;
+  transform: translate(-13%, -17%);
 }
 .whyUs .seen-products-p {
   text-align: center;
 }
 .whyUs .addedPost {
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,18 +156,19 @@ header img {
   border-radius: 50%;
   min-width: 60px;
   min-height: 60px;
-  margin-top: 37px;
+  margin-top: 20px;
   margin-bottom: 20px;
-  position: absolute;
+  position: relative;
+  transform: translate(40%);
   z-index: 1;
 }
 .whyUs .addedPost img {
-  margin-top: 25px;
+  margin-top: 20px;
   position: relative;
   z-index: 2;
-  margin-left: 45px;
   margin-bottom: 20px;
   max-width: 16%;
+  transform: translate(-11%);
 }
 .whyUs .added-Post-p {
   margin-bottom: 50px;
@@ -214,7 +219,7 @@ header img {
   font-weight: 400;
 }
 .beneficts .alwaysFirst p {
-  width: 80%;
+  width: 84%;
   text-align: left;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
@@ -252,12 +257,14 @@ header img {
 }
 .beneficts .yourShop h3 {
   margin-top: 40px;
+  margin-left: 5%;
+  margin-bottom: 10px;
   font-family: "Open Sans", sans-serif;
-  text-align: center;
+  text-align: left;
   font-weight: 400;
 }
 .beneficts .yourShop p {
-  width: 80%;
+  width: 87%;
   text-align: left;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
@@ -271,6 +278,7 @@ header img {
   max-width: 280px;
   min-height: 80px;
   margin-top: 15px;
+  margin-bottom: 10%;
   font-size: 30px;
   background-color: white;
   border: 1px solid #e8e9ed;
@@ -281,6 +289,7 @@ header img {
   text-align: left;
   font-weight: 400;
   margin-left: 10%;
+  margin-bottom: 15px;
 }
 .beneficts .increase-recognition p {
   width: 80%;
@@ -371,6 +380,9 @@ header img {
   transform: translateY(-80%);
   position: relative;
 }
+.pricing .shadow-wrap {
+  box-shadow: 5px, 10px rgba(7, 172, 230, 0.29);
+}
 .pricing .shadow-wrap .profesional {
   display: flex;
   flex-direction: row;
@@ -378,7 +390,7 @@ header img {
   align-content: center;
   border: 1px solid #07ace6;
   border-radius: 18px;
-  margin: auto 3%;
+  margin: auto 4%;
 }
 .pricing .shadow-wrap .profesional .price-wrap {
   margin-top: 70px;
