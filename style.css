@@ -5,26 +5,31 @@
 }
 
 body {
+  font-family: "Raleway", "Open Sans", sans-serif;
   min-width: 320px;
 }
 
-header {
+.header-Wrap {
+  max-width: 100%;
+}
+.header-Wrap header {
   min-height: 70px;
   display: flex;
+  max-width: 100%;
   justify-content: space-around;
   align-items: center;
   color: #08a6e4;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
-header h1 {
+.header-Wrap header h1 {
   font-weight: 300;
   font-size: 32px;
   font-family: "Raleway", sans-serif;
   margin-left: -5%;
   max-width: 90%;
 }
-header .burguer-menu {
+.header-Wrap header .burguer-menu {
   display: flex;
   position: relative;
   z-index: 2;
@@ -33,10 +38,10 @@ header .burguer-menu {
   justify-content: space-between;
   align-items: center;
 }
-header .burguer-menu .nav-wrap #menu {
+.header-Wrap header .burguer-menu .nav-wrap #menu {
   display: none;
 }
-header .burguer-menu .nav-wrap .nav-menu {
+.header-Wrap header .burguer-menu .nav-wrap .nav-menu {
   background-color: #ffffff;
   color: #a5a5a5;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
@@ -53,17 +58,17 @@ header .burguer-menu .nav-wrap .nav-menu {
   font-size: 11px;
   font-weight: 700;
 }
-header .burguer-menu .nav-wrap .nav-menu a {
+.header-Wrap header .burguer-menu .nav-wrap .nav-menu a {
   margin: 2% 5%;
   text-decoration: none;
 }
-header .burguer-menu .nav-wrap .nav-menu a:link {
+.header-Wrap header .burguer-menu .nav-wrap .nav-menu a:link {
   color: #a5a5a5;
 }
-header .burguer-menu .nav-wrap .nav-menu a:visited {
+.header-Wrap header .burguer-menu .nav-wrap .nav-menu a:visited {
   color: #000000;
 }
-header .burguer-menu .nav-wrap #menu:checked + .nav-menu {
+.header-Wrap header .burguer-menu .nav-wrap #menu:checked + .nav-menu {
   display: none;
 }
 
@@ -111,6 +116,7 @@ header .burguer-menu .nav-wrap #menu:checked + .nav-menu {
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
+  margin-bottom: 5%;
 }
 .whyUs h2 {
   max-width: 80%;
@@ -121,7 +127,15 @@ header .burguer-menu .nav-wrap #menu:checked + .nav-menu {
   line-height: 35px;
   font-family: "Raleway", sans-serif;
 }
-.whyUs .dailyEntries {
+.whyUs .wrapper-0 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.whyUs .wrapper-0 .wrapper-1 .dailyEntries {
   max-width: 100%;
   display: flex;
   justify-content: center;
@@ -129,7 +143,7 @@ header .burguer-menu .nav-wrap #menu:checked + .nav-menu {
   position: relative;
   margin-bottom: 3%;
 }
-.whyUs .dailyEntries .redDot {
+.whyUs .wrapper-0 .wrapper-1 .dailyEntries .redDot {
   background-color: #fb3b64;
   border-radius: 50%;
   min-width: 60px;
@@ -140,32 +154,32 @@ header .burguer-menu .nav-wrap #menu:checked + .nav-menu {
   transform: translate(35%);
   margin-bottom: 10px;
 }
-.whyUs .dailyEntries img {
+.whyUs .wrapper-0 .wrapper-1 .dailyEntries img {
   margin-top: 27px;
   position: relative;
   z-index: 2;
   transform: translate(-18%, -18%) scale(85%);
 }
-.whyUs h3 {
+.whyUs .wrapper-0 .wrapper-1 h3 {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   margin-top: -10px;
 }
-.whyUs p {
+.whyUs .wrapper-0 .wrapper-1 p {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   color: #a5a5a5;
   margin-top: 5px;
   font-size: 16px;
 }
-.whyUs .seenProducts {
+.whyUs .wrapper-0 .wrapper-2 .seenProducts {
   max-width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-.whyUs .seenProducts .blueDot {
+.whyUs .wrapper-0 .wrapper-2 .seenProducts .blueDot {
   background-color: #08a6e4;
   border-radius: 50%;
   min-width: 60px;
@@ -173,25 +187,35 @@ header .burguer-menu .nav-wrap #menu:checked + .nav-menu {
   margin-top: 20px;
   position: relative;
   z-index: 1;
-  transform: translate(54%);
+  transform: translate(72%);
 }
-.whyUs .seenProducts img {
+.whyUs .wrapper-0 .wrapper-2 .seenProducts img {
   margin-top: 27px;
   position: relative;
   z-index: 2;
-  transform: translate(-13%, -17%);
+  transform: translate(2%, -17%);
 }
-.whyUs .seen-products-p {
+.whyUs .wrapper-0 .wrapper-2 h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
   text-align: center;
+  margin-top: 5px;
 }
-.whyUs .addedPost {
+.whyUs .wrapper-0 .wrapper-2 p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  color: #a5a5a5;
+  margin-top: 5px;
+  font-size: 16px;
+}
+.whyUs .wrapper-0 .wrapper-3 .addedPost {
   width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-.whyUs .addedPost .greenDot {
+.whyUs .wrapper-0 .wrapper-3 .addedPost .greenDot {
   background-color: #55dfb4;
   border-radius: 50%;
   min-width: 60px;
@@ -199,19 +223,28 @@ header .burguer-menu .nav-wrap #menu:checked + .nav-menu {
   margin-top: 20px;
   margin-bottom: 20px;
   position: relative;
-  transform: translate(40%);
+  transform: translate(54%);
   z-index: 1;
 }
-.whyUs .addedPost img {
+.whyUs .wrapper-0 .wrapper-3 .addedPost img {
   margin-top: 20px;
   position: relative;
   z-index: 2;
   margin-bottom: 20px;
-  max-width: 16%;
   transform: translate(-11%);
 }
-.whyUs .added-Post-p {
-  margin-bottom: 50px;
+.whyUs .wrapper-0 .wrapper-3 h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  margin-top: -10px;
+  text-align: center;
+}
+.whyUs .wrapper-0 .wrapper-3 p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  color: #a5a5a5;
+  margin-top: 5px;
+  font-size: 16px;
 }
 
 .beneficts {
@@ -221,18 +254,20 @@ header .burguer-menu .nav-wrap #menu:checked + .nav-menu {
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
+  margin-top: 10px;
+  max-width: 325px;
 }
 .beneficts .alwaysFirst {
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
   flex-wrap: wrap;
-  max-width: 280px;
   min-height: 80px;
   margin-top: 15px;
   font-size: 30px;
   background-color: white;
   border: 1px solid #e8e9ed;
+  max-width: 90%;
 }
 .beneficts .alwaysFirst .img-wrap {
   display: flex;
@@ -248,29 +283,35 @@ header .burguer-menu .nav-wrap #menu:checked + .nav-menu {
   transform: translate(179%, -1%) scale(75%) rotate(45deg);
   position: relative;
 }
+.beneficts .alwaysFirst .img-wrap .mb-grande {
+  display: none;
+}
 .beneficts .alwaysFirst .img-wrap img {
   position: relative;
   transform: translate(-21%, 19%);
 }
-.beneficts .alwaysFirst h3 {
+.beneficts .alwaysFirst .text-wrapper h3 {
   margin-top: 40px;
   font-family: "Open Sans", sans-serif;
   text-align: left;
   font-weight: 400;
 }
-.beneficts .alwaysFirst p {
+.beneficts .alwaysFirst .text-wrapper p {
   width: 84%;
   text-align: left;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   margin-bottom: 30px;
 }
+.beneficts .alwaysFirst .text-wrapper .line {
+  display: none;
+}
 .beneficts .yourShop {
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
   flex-wrap: wrap;
-  max-width: 280px;
+  max-width: 90%;
   min-height: 80px;
   margin-top: 15px;
   font-size: 30px;
@@ -291,11 +332,14 @@ header .burguer-menu .nav-wrap #menu:checked + .nav-menu {
   transform: translate(65%, 16%) scale(99%);
   position: relative;
 }
-.beneficts .yourShop .img-wrap img {
+.beneficts .yourShop .img-wrap .ip-litte {
   position: relative;
   transform: translate(-25%, 19%);
 }
-.beneficts .yourShop h3 {
+.beneficts .yourShop .img-wrap .ip-grande {
+  display: none;
+}
+.beneficts .yourShop .text-wrap h3 {
   margin-top: 40px;
   margin-left: 5%;
   margin-bottom: 10px;
@@ -303,7 +347,7 @@ header .burguer-menu .nav-wrap #menu:checked + .nav-menu {
   text-align: left;
   font-weight: 400;
 }
-.beneficts .yourShop p {
+.beneficts .yourShop .text-wrap p {
   width: 87%;
   text-align: left;
   font-family: "Open Sans", sans-serif;
@@ -315,7 +359,7 @@ header .burguer-menu .nav-wrap #menu:checked + .nav-menu {
   align-items: flex-start;
   justify-content: space-around;
   flex-wrap: wrap;
-  max-width: 280px;
+  max-width: 90%;
   min-height: 80px;
   margin-top: 15px;
   margin-bottom: 10%;
@@ -323,7 +367,7 @@ header .burguer-menu .nav-wrap #menu:checked + .nav-menu {
   background-color: white;
   border: 1px solid #e8e9ed;
 }
-.beneficts .increase-recognition h3 {
+.beneficts .increase-recognition .text-wrap h3 {
   margin-top: 40px;
   font-family: "Open Sans", sans-serif;
   text-align: left;
@@ -331,7 +375,7 @@ header .burguer-menu .nav-wrap #menu:checked + .nav-menu {
   margin-left: 10%;
   margin-bottom: 15px;
 }
-.beneficts .increase-recognition p {
+.beneficts .increase-recognition .text-wrap p {
   width: 80%;
   text-align: left;
   font-family: "Open Sans", sans-serif;
@@ -680,4 +724,150 @@ footer .sm-logos {
   align-items: center;
   min-height: 89px;
   width: 30%;
+}
+
+@media screen and (min-width: 1000px) {
+  .sales h2 {
+    font-size: 49px;
+    line-height: 57px;
+    text-align: center;
+    margin-bottom: 0%;
+  }
+  .sales p {
+    margin-top: 0;
+    margin-left: 5%;
+    margin-bottom: -1%;
+  }
+  .sales button {
+    padding: 2rem 10rem;
+    margin: 1.75rem;
+    transform: translate(136%);
+    font-size: 16px;
+    font-weight: 22px;
+  }
+  .whyUs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .whyUs h2 {
+    font-size: 36px;
+    line-height: 42px;
+    min-width: 100%;
+  }
+  .whyUs .wrapper-0 {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 53%;
+  }
+  .beneficts {
+    min-width: 100%;
+  }
+  .beneficts .alwaysFirst {
+    max-width: 55%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+  }
+  .beneficts .alwaysFirst .img-wrap {
+    min-height: 100%;
+    max-width: 50%;
+    order: 2;
+  }
+  .beneficts .alwaysFirst .img-wrap .mb-grande {
+    display: block;
+    min-width: 386px;
+    translate: 10% -6%;
+  }
+  .beneficts .alwaysFirst .img-wrap .mb-litte {
+    display: none;
+  }
+  .beneficts .alwaysFirst .img-wrap .bg-red-circunference {
+    scale: 180%;
+    border-radius: 41%;
+    translate: 28% 37%;
+  }
+  .beneficts .alwaysFirst .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 45%;
+    order: 1;
+    margin-bottom: 11%;
+  }
+  .beneficts .alwaysFirst .text-wrapper h3 {
+    margin-bottom: 10px;
+  }
+  .beneficts .alwaysFirst .text-wrapper .line {
+    display: inline-block;
+    background-color: #fb3b64;
+    min-height: 2px;
+    max-width: 65%;
+  }
+  .beneficts .yourShop {
+    display: flex;
+    max-width: 55%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+  }
+  .beneficts .yourShop .img-wrap {
+    min-height: 100%;
+    max-width: 50%;
+    order: 1;
+  }
+  .beneficts .yourShop .img-wrap .ip-litte {
+    display: none;
+  }
+  .beneficts .yourShop .img-wrap .ip-grande {
+    display: block;
+    position: relative;
+    translate: -8% -1%;
+    max-width: 426px;
+    scale: 90%;
+  }
+  .beneficts .yourShop .img-wrap .bg-blue-circunference {
+    scale: 235%;
+    translate: 4% 36%;
+  }
+  .beneficts .yourShop .text-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    max-width: 32%;
+    order: 2;
+  }
+  .beneficts .yourShop .text-wrap h3 {
+    margin-left: 0;
+  }
+  .beneficts .yourShop .text-wrap .line {
+    display: inline-block;
+    background-color: #08a6e4;
+    min-height: 2px;
+    max-width: 65%;
+  }
+  .beneficts .increase-recognition {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 55%;
+    background-color: #f7f7f7;
+    border: none;
+  }
+  .beneficts .text-wrap {
+    background-color: white;
+    border: 1px solid #e8e9ed;
+    border-radius: 5px;
+    order: 1;
+    max-width: 40%;
+  }
+  .beneficts .greenDiv {
+    border-radius: 5px;
+    border: 1px solid #e8e9ed;
+    order: 2;
+    max-width: 40%;
+  }
 }/*# sourceMappingURL=style.css.map */
