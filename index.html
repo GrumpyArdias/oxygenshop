@@ -23,7 +23,23 @@
     <!-- Header -->
     <header>
       <h1>OXYGENShop</h1>
-      <button><img src="./images/Menu.png" alt="menu logo" /></button>
+
+      <div class="burguer-menu">
+        <nav class="nav">
+          <div class="nav-wrap">
+            <label for="menu" class="nav-label">
+              <img src="./images/Menu.png" alt="menu-logo" />
+            </label>
+            <input type="checkbox" name="menu" id="menu" />
+            <div class="nav-menu">
+              <a href="#whyUs" class="nav-item">WHY US</a>
+              <a href="#beneficts" class="nav-item"> BENEFICTS</a>
+              <a href="#price" class="nav-item">PRICES</a>
+              <a href="#contact" class="nav-item">CONTACT</a>
+            </div>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <!-- FIRST CONTENT BLOCK -->
@@ -36,7 +52,7 @@
     </div>
 
     <!-- SECOND CONTENT BLOCK -->
-    <div class="whyUs">
+    <div class="whyUs" id="whyUs">
       <h2>The most popular sales platform in country</h2>
 
       <div class="dailyEntries">
@@ -64,7 +80,7 @@
     </div>
 
     <!-- THIRD CONTENT BLOCK -->
-    <div class="beneficts">
+    <div class="beneficts" id="beneficts">
       <div class="alwaysFirst">
         <div class="img-wrap">
           <div class="bg-red-circunference"></div>
@@ -105,7 +121,7 @@
     </div>
 
     <!-- FOURTH CONTENT BLOCK -->
-    <div class="pricing">
+    <div class="price" id="price">
       <h3>Pricing</h3>
 
       <div class="basic">
@@ -212,7 +228,7 @@
     </div>
 
     <!-- FIFTH CONTENT BLOCK -->
-    <div class="contact">
+    <div class="contact" id="contact">
       <div class="contact-text">
         <h2>Any questions?</h2>
         <h4>Leave your email address or call us!</h4>

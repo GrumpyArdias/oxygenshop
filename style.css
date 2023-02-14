@@ -15,6 +15,7 @@ header {
   align-items: center;
   color: #08a6e4;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 header h1 {
   font-weight: 300;
@@ -23,10 +24,47 @@ header h1 {
   margin-left: -5%;
   max-width: 90%;
 }
-header button {
+header .burguer-menu {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  margin: 0 -5%;
+  justify-content: space-between;
   align-items: center;
-  margin-right: -5%;
-  border: none;
+}
+header .burguer-menu .nav-wrap #menu {
+  display: none;
+}
+header .burguer-menu .nav-wrap .nav-menu {
+  background-color: #ffffff;
+  color: #a5a5a5;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  transform: translate(-88%, 33%);
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  min-width: 325px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  top: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+}
+header .burguer-menu .nav-wrap .nav-menu a {
+  margin: 2% 5%;
+  text-decoration: none;
+}
+header .burguer-menu .nav-wrap .nav-menu a:link {
+  color: #a5a5a5;
+}
+header .burguer-menu .nav-wrap .nav-menu a:visited {
+  color: #000000;
+}
+header .burguer-menu .nav-wrap #menu:checked + .nav-menu {
+  display: none;
 }
 
 .sales h2 {
@@ -57,8 +95,10 @@ header button {
   background-color: #08a6e4;
   color: white;
   border: 0;
-  box-shadow: 0 3px 10px rgba(7, 172, 230, 0.2);
   transform: translate(20%);
+}
+.sales button:hover {
+  box-shadow: 0 3px 10px rgba(7, 172, 230, 0.2);
 }
 .sales img {
   width: 100%;
@@ -306,18 +346,18 @@ header button {
   transform: translate(-8%, 20%) scale(90%);
 }
 
-.pricing {
+.price {
   display: flex;
   flex-direction: column;
 }
-.pricing h3 {
+.price h3 {
   text-align: center;
   font-size: 36px;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   margin-top: 25px;
 }
-.pricing .basic {
+.price .basic {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -327,45 +367,45 @@ header button {
   border-radius: 18px;
   margin: 14px 10%;
 }
-.pricing .basic .price-wrap {
+.price .basic .price-wrap {
   margin-top: 70px;
   margin-left: 10%;
 }
-.pricing .basic .price-wrap h4 {
+.price .basic .price-wrap h4 {
   font-size: 20px;
   font-weight: 700;
   font-family: "Raleway", sans-serif;
   text-align: center;
   margin-bottom: -5px;
 }
-.pricing .basic .price-wrap h2 {
+.price .basic .price-wrap h2 {
   font-size: 46px;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   color: #fb3b64;
   margin-bottom: 100px;
 }
-.pricing .basic table {
+.price .basic table {
   margin-top: 25px;
   margin-right: 4%;
   margin-left: 20px;
   margin-bottom: 60px;
 }
-.pricing .basic table tbody {
+.price .basic table tbody {
   margin-top: -10px;
 }
-.pricing .basic table tbody tr {
+.price .basic table tbody tr {
   padding: 10px;
 }
-.pricing .basic table tbody tr td img {
+.price .basic table tbody tr td img {
   padding-right: 10px;
 }
-.pricing .basic table tbody tr td p {
+.price .basic table tbody tr td p {
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
   text-align: left;
 }
-.pricing .basic-button {
+.price .basic-button {
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
   font-weight: 700;
@@ -380,10 +420,7 @@ header button {
   transform: translateY(-80%);
   position: relative;
 }
-.pricing .shadow-wrap {
-  box-shadow: 5px, 10px rgba(7, 172, 230, 0.29);
-}
-.pricing .shadow-wrap .profesional {
+.price .profesional {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -392,25 +429,25 @@ header button {
   border-radius: 18px;
   margin: auto 4%;
 }
-.pricing .shadow-wrap .profesional .price-wrap {
+.price .profesional .price-wrap {
   margin-top: 70px;
   margin-left: 5%;
 }
-.pricing .shadow-wrap .profesional .price-wrap h4 {
+.price .profesional .price-wrap h4 {
   font-size: 20px;
   font-weight: 700;
   font-family: "Raleway", sans-serif;
   text-align: center;
   margin-bottom: -5px;
 }
-.pricing .shadow-wrap .profesional .price-wrap h2 {
+.price .profesional .price-wrap h2 {
   font-size: 46px;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   color: #07ace6;
   text-align: center;
 }
-.pricing .shadow-wrap .profesional .price-wrap p {
+.price .profesional .price-wrap p {
   margin-bottom: 50px;
   text-align: center;
   font-size: 12px;
@@ -418,27 +455,30 @@ header button {
   font-weight: 700;
   margin-bottom: 80px;
 }
-.pricing .shadow-wrap .profesional table {
+.price .profesional table {
   margin-top: 25px;
   margin-right: 2%;
   margin-left: 20px;
   margin-bottom: 50px;
 }
-.pricing .shadow-wrap .profesional table tbody {
+.price .profesional table tbody {
   margin-top: -10px;
 }
-.pricing .shadow-wrap .profesional table tbody tr {
+.price .profesional table tbody tr {
   padding: 10px;
 }
-.pricing .shadow-wrap .profesional table tbody tr td img {
+.price .profesional table tbody tr td img {
   padding-right: 10px;
 }
-.pricing .shadow-wrap .profesional table tbody tr td p {
+.price .profesional table tbody tr td p {
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
   text-align: left;
 }
-.pricing .profesional-button {
+.price .profesional:hover {
+  box-shadow: 5px, 10000px rgba(7, 172, 230, 0.29);
+}
+.price .profesional-button {
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
   font-weight: 700;
@@ -453,7 +493,7 @@ header button {
   transform: translateY(-50%);
   position: relative;
 }
-.pricing .premium {
+.price .premium {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -463,24 +503,24 @@ header button {
   border-radius: 18px;
   margin: 14px 10%;
 }
-.pricing .premium .price-wrap {
+.price .premium .price-wrap {
   margin-top: 56px;
 }
-.pricing .premium .price-wrap h4 {
+.price .premium .price-wrap h4 {
   font-size: 20px;
   font-weight: 700;
   font-family: "Raleway", sans-serif;
   text-align: center;
   margin-bottom: -5px;
 }
-.pricing .premium .price-wrap h2 {
+.price .premium .price-wrap h2 {
   font-size: 46px;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   color: #55dfb4;
   text-align: center;
 }
-.pricing .premium .price-wrap p {
+.price .premium .price-wrap p {
   margin-bottom: 50px;
   text-align: center;
   font-size: 12px;
@@ -488,27 +528,27 @@ header button {
   font-weight: 700;
   margin-bottom: 90px;
 }
-.pricing .premium table {
+.price .premium table {
   margin-top: 25px;
   margin-right: -3%;
   margin-left: -14px;
   margin-bottom: 60px;
 }
-.pricing .premium table tbody {
+.price .premium table tbody {
   margin-top: -10px;
 }
-.pricing .premium table tbody tr {
+.price .premium table tbody tr {
   padding: 10px;
 }
-.pricing .premium table tbody tr td img {
+.price .premium table tbody tr td img {
   padding-right: 10px;
 }
-.pricing .premium table tbody tr td p {
+.price .premium table tbody tr td p {
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
   text-align: left;
 }
-.pricing .premium-button {
+.price .premium-button {
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
   font-weight: 700;
