@@ -26,3 +26,14 @@ toTopBtn.addEventListener("click", function () {
     toTopAnchor.hrref = "#header";
   }, 200);
 });
+
+// burguer menu
+
+const burguerIcon = document.getElementById("burguer-img");
+const NavMenu = document.getElementById("nav-menu");
+
+burguerIcon.addEventListener("click", () => {
+  NavMenu.style.display === "none"
+    ? (NavMenu.style.display = "flex")
+    : (NavMenu.style.display = "none");
+});
