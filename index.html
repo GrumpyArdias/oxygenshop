@@ -326,20 +326,22 @@
         </table>
       </div>
       <div class="contact-text">
-        <form action="" id="contact-form">
+        <div id="error-msg"></div>
+        <form action="/" method="GET" id="contact-form">
           <label for="name">Name</label>
           <br />
-          <input type="text" name="name" id="name" />
+          <input type="text" name="name" id="name" required />
           <br />
           <label for="email">Email</label>
           <br />
-          <input type="text" name="email" id="email" />
+          <input type="text" name="email" id="email" required />
 
           <div class="checkbox-wrap">
             <input
               type="checkbox"
               name="terms-of-service"
               id="terms-of-service"
+              required
             />
             <p>
               I hereby give consent for my personal data included in my
@@ -351,7 +353,14 @@
               95/46/EC (Data Protection Directive)
             </p>
           </div>
-          <button type="submit" form="contact-form" value="Send">Send</button>
+          <button
+            id="submint-btn"
+            type="submit"
+            form="contact-form"
+            value="Send"
+          >
+            Send
+          </button>
         </form>
       </div>
     </div>
