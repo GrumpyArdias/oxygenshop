@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
 
     <!-- Google Fonts links -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,8 +24,11 @@
     <title>Oxygen Shop</title>
   </head>
   <body>
+    <!-- progress bar -->
+    <div class="progress-bar"></div>
+
     <!-- Header -->
-    <div class="header-Wrap">
+    <div class="header-Wrap" id="header">
       <header>
         <h1>OXYGENShop</h1>
         <div class="big-menu">
@@ -349,7 +356,11 @@
     </div>
 
     <!-- FOOTER CONTENT BLOCK -->
-
+    <a id="anchor-to-top" href=""
+      ><div class="to-top">
+        <span class="material-symbols-outlined"> arrow_upward </span>
+      </div></a
+    >
     <footer>
       <div class="footer-text">
         <h1>OXYGENShop</h1>
@@ -360,5 +371,7 @@
         <img src="./images/fb.png" alt="fb logo" />
       </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
