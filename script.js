@@ -65,4 +65,3 @@ form.addEventListener("submit", (e) => {
     errorDiv.style.color = "#fc0303";
   }
 });
-//El nombre tiene que tener entre 2 y 100 letras,
