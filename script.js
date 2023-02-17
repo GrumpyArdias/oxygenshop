@@ -39,7 +39,7 @@ burguerIcon.addEventListener("click", () => {
     : (NavMenu.style.display = "none");
 });
 
-// Input validation
+// Input validation and Fetch data
 
 form.addEventListener("submit", (e) => {
   let errorMsg = [];
@@ -63,5 +63,22 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
     errorDiv.innerHTML = errorMsg.join(", ");
     errorDiv.style.color = "#fc0303";
+  } else {
+    e.preventDefault();
+    fetch("https://jsonplaceholder.typicode.com/posts", {
+      method: "POST",
+      body: JSON.stringify({
+        title: "OxygenShop Contact Request",
+        UserName: nameInput,
+        mail: mail.value,
+        userId: Date.now(),
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
+      .then((response) => response.json())
+      .then((json) => console.log(json))
+      .catch((e) => console.log("error"));
   }
 });
