@@ -93,6 +93,47 @@ async function currencyFetchHandle() {
   }
 }
 
+async function exchangeCalculations(currency) {
+  try {
+    const data = await currencyFetchHandle();
+    const basic = document.getElementById("h2-basic");
+    const profesional = document.getElementById("h2-profesional");
+    const premium = document.getElementById("h2-premium");
+    const profesionalPrice = 25;
+    const premiumPrice = 60;
+    const eurConvertValue = data.eur.usd;
+    const gbpConvertValue = data.eur.gbp;
+
+    if (currency === "dollar") {
+      basic.innerHTML = "$0";
+      profesional.innerHTML = "$25";
+      premium.innerHTML = "$60";
+    }
+
+    if (currency === "euro") {
+      basic.innerHTML = "€0";
+
+      const profesionalEuro = Math.round(profesionalPrice / eurConvertValue);
+      profesional.innerHTML = `€${profesionalEuro}`;
+
+      const premiumEuro = Math.round(premiumPrice / eurConvertValue);
+      premium.innerHTML = `€${premiumEuro}`;
+    }
+
+    if (currency === "gbp") {
+      basic.innerHTML = "£0";
+
+      const profesionalGbp = Math.round(profesionalPrice / gbpConvertValue);
+      profesional.innerHTML = `£${profesionalGbp}`;
+
+      const premiumGbp = Math.round(premiumPrice / gbpConvertValue);
+      premium.innerHTML = `£${premiumGbp}`;
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 function closeModal() {
   document.querySelector(".modal").style.display = "none";
   document.body.style.backgroundColor = "white";
@@ -192,44 +233,3 @@ selectedCurrency.addEventListener("change", async (e) => {
   exchangeCalculations(selectedOption);
   console.log(data);
 });
-
-async function exchangeCalculations(currency) {
-  try {
-    const data = await currencyFetchHandle();
-    const basic = document.getElementById("h2-basic");
-    const profesional = document.getElementById("h2-profesional");
-    const premium = document.getElementById("h2-premium");
-    const profesionalPrice = 25;
-    const premiumPrice = 60;
-    const eurConvertValue = data.eur.usd;
-    const gbpConvertValue = data.eur.gbp;
-
-    if (currency === "dollar") {
-      basic.innerHTML = "$0";
-      profesional.innerHTML = "$25";
-      premium.innerHTML = "$60";
-    }
-
-    if (currency === "euro") {
-      basic.innerHTML = "€0";
-
-      const profesionalEuro = Math.round(profesionalPrice / eurConvertValue);
-      profesional.innerHTML = `€${profesionalEuro}`;
-
-      const premiumEuro = Math.round(premiumPrice / eurConvertValue);
-      premium.innerHTML = `€${premiumEuro}`;
-    }
-
-    if (currency === "gbp") {
-      basic.innerHTML = "£0";
-
-      const profesionalGbp = Math.round(profesionalPrice / gbpConvertValue);
-      profesional.innerHTML = `£${profesionalGbp}`;
-
-      const premiumGbp = Math.round(premiumPrice / gbpConvertValue);
-      premium.innerHTML = `£${premiumGbp}`;
-    }
-  } catch (error) {
-    console.error(error);
-  }
-}
