@@ -471,6 +471,12 @@ aside .modal #newsletter-container #newsletter-form button {
   font-weight: 400;
   margin-top: 25px;
 }
+.price select {
+  margin: 20px auto;
+  max-width: 10vw;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
 .price .price-container .basic {
   display: flex;
   flex-direction: row;

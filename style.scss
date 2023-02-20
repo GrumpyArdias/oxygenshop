@@ -515,6 +515,14 @@ aside {
     font-weight: 400;
     margin-top: 25px;
   }
+
+  select {
+    margin: 20px auto;
+    max-width: 10vw;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+  }
+
   .price-container {
     .basic {
       display: flex;

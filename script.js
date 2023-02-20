@@ -8,6 +8,7 @@ const formContact = document.getElementById("contact-form");
 const errorDiv = document.getElementById("error-msg");
 const nchlBtn = document.getElementById("nwsl-btn");
 const closeBtn = document.getElementById("close-Btn");
+const selectedCurrency = document.getElementById("currency");
 
 const formData = {
   userName: document.getElementById("name"),
@@ -78,6 +79,18 @@ function fetchHandel(name, mail, nlMail) {
     .then((response) => response.json())
     .then((json) => console.log(json))
     .catch((e) => console.error(e));
+}
+
+async function currencyFetchHandle() {
+  try {
+    const response = await fetch(
+      "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/eur.json"
+    );
+    const currencies = await response.json();
+    return currencies;
+  } catch (e) {
+    console.log(e);
+  }
 }
 
 function closeModal() {
@@ -172,4 +185,51 @@ closeBtn.addEventListener("click", (e) => {
   document.body.style.backgroundColor = "white";
 });
 
-// TO DO SCROLL ALWAYS POPS
+// Currency exange
+
+selectedCurrency.addEventListener("change", async (e) => {
+  const selectedOption = e.target.value;
+  exchangeCalculations(selectedOption);
+  console.log(data);
+});
+
+async function exchangeCalculations(currency) {
+  try {
+    const data = await currencyFetchHandle();
+    const basic = document.getElementById("h2-basic");
+    const profesional = document.getElementById("h2-profesional");
+    const premium = document.getElementById("h2-premium");
+    const profesionalPrice = 25;
+    const premiumPrice = 60;
+    const eurConvertValue = data.eur.usd;
+    const gbpConvertValue = data.eur.gbp;
+
+    if (currency === "dollar") {
+      basic.innerHTML = "$0";
+      profesional.innerHTML = "$25";
+      premium.innerHTML = "$60";
+    }
+
+    if (currency === "euro") {
+      basic.innerHTML = "€0";
+
+      const profesionalEuro = Math.round(profesionalPrice / eurConvertValue);
+      profesional.innerHTML = `€${profesionalEuro}`;
+
+      const premiumEuro = Math.round(premiumPrice / eurConvertValue);
+      premium.innerHTML = `€${premiumEuro}`;
+    }
+
+    if (currency === "gbp") {
+      basic.innerHTML = "£0";
+
+      const profesionalGbp = Math.round(profesionalPrice / gbpConvertValue);
+      profesional.innerHTML = `£${profesionalGbp}`;
+
+      const premiumGbp = Math.round(premiumPrice / gbpConvertValue);
+      premium.innerHTML = `£${premiumGbp}`;
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
