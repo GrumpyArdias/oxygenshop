@@ -162,6 +162,9 @@ document.addEventListener(
   },
   false
 );
+document.addEventListener("keydown", (e) => {
+  e.key === "Escape" ? closeModal() : null;
+});
 
 closeBtn.addEventListener("click", (e) => {
   e.preventDefault();
