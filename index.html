@@ -189,12 +189,18 @@
     <div class="price" id="price">
       <h3>Pricing</h3>
 
+      <select name="currency" id="currency">
+        <option value="dollar">USD($)</option>
+        <option value="gbp">GBP (£)</option>
+        <option value="euro">EUR(€)</option>
+      </select>
+
       <div class="price-container">
         <div class="basic-container">
           <div class="basic">
             <div class="text-price-wrapper">
               <h4>Basic</h4>
-              <h2>$0</h2>
+              <h2 id="h2-basic">$0</h2>
             </div>
             <table>
               <tr>
@@ -232,7 +238,7 @@
           <div class="profesional">
             <div class="text-price-wrapper">
               <h4>Profesional</h4>
-              <h2>$25</h2>
+              <h2 id="h2-profesional">$25</h2>
               <p>Limited offer</p>
             </div>
             <table>
@@ -273,7 +279,7 @@
           <div class="premium">
             <div class="text-price-wrapper">
               <h4>Premium</h4>
-              <h2>$60</h2>
+              <h2 id="h2-premium">$60</h2>
               <p>Limited offer</p>
             </div>
             <table>

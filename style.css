@@ -69,7 +69,11 @@ aside .modal #newsletter-container #newsletter-form button {
   top: 0;
   left: 0;
   height: 10px;
-  background: linear-gradient(to right, rgba(8, 166, 228, 0.6235294118), #08a6e4);
+  background: linear-gradient(
+    to right,
+    rgba(8, 166, 228, 0.6235294118),
+    #08a6e4
+  );
   width: 0%;
   z-index: 1000;
   transition: width 0.2s ease-out;
@@ -479,14 +483,13 @@ aside .modal #newsletter-container #newsletter-form button {
   font-weight: 400;
   margin-top: 25px;
 }
-.price .price-container {
-  margin: 0 auto;
-  display: block;
+.price select {
+  margin: 20px auto;
+  max-width: 10vw;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
 }
-.price .price-container .basic-container {
-  margin: 0 auto;
-}
-.price .price-container .basic-container .basic {
+.price .price-container .basic {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -561,25 +564,44 @@ aside .modal #newsletter-container #newsletter-form button {
   border: 1px solid #07ace6;
   border-radius: 18px;
 }
-.price .price-container .profesional-container .profesional .text-price-wrapper {
+.price
+  .price-container
+  .profesional-container
+  .profesional
+  .text-price-wrapper {
   margin-top: 70px;
   margin-left: 5%;
 }
-.price .price-container .profesional-container .profesional .text-price-wrapper h4 {
+.price
+  .price-container
+  .profesional-container
+  .profesional
+  .text-price-wrapper
+  h4 {
   font-size: 20px;
   font-weight: 700;
   font-family: "Raleway", sans-serif;
   text-align: center;
   margin-bottom: -5px;
 }
-.price .price-container .profesional-container .profesional .text-price-wrapper h2 {
+.price
+  .price-container
+  .profesional-container
+  .profesional
+  .text-price-wrapper
+  h2 {
   font-size: 46px;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   color: #07ace6;
   text-align: center;
 }
-.price .price-container .profesional-container .profesional .text-price-wrapper p {
+.price
+  .price-container
+  .profesional-container
+  .profesional
+  .text-price-wrapper
+  p {
   margin-bottom: 50px;
   text-align: center;
   font-size: 12px;
@@ -599,10 +621,26 @@ aside .modal #newsletter-container #newsletter-form button {
 .price .price-container .profesional-container .profesional table tbody tr {
   padding: 10px;
 }
-.price .price-container .profesional-container .profesional table tbody tr td img {
+.price
+  .price-container
+  .profesional-container
+  .profesional
+  table
+  tbody
+  tr
+  td
+  img {
   padding-right: 10px;
 }
-.price .price-container .profesional-container .profesional table tbody tr td p {
+.price
+  .price-container
+  .profesional-container
+  .profesional
+  table
+  tbody
+  tr
+  td
+  p {
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
   text-align: left;
@@ -1089,25 +1127,56 @@ footer .footer-wrap .sm-logos img {
   .price .price-container .profesional-container .profesional {
     flex-direction: column;
   }
-  .price .price-container .profesional-container .profesional .text-price-wrapper h4 {
+  .price
+    .price-container
+    .profesional-container
+    .profesional
+    .text-price-wrapper
+    h4 {
     margin-top: 10%;
     margin-bottom: 2%;
   }
-  .price .price-container .profesional-container .profesional .text-price-wrapper h2 {
+  .price
+    .price-container
+    .profesional-container
+    .profesional
+    .text-price-wrapper
+    h2 {
     margin-bottom: 2%;
   }
-  .price .price-container .profesional-container .profesional .text-price-wrapper p {
+  .price
+    .price-container
+    .profesional-container
+    .profesional
+    .text-price-wrapper
+    p {
     margin-bottom: 10%;
   }
   .price .price-container .profesional-container .profesional table {
     translate: 24% -26%;
     border-spacing: 30px;
   }
-  .price .price-container .profesional-container .profesional table tbody tr td img {
+  .price
+    .price-container
+    .profesional-container
+    .profesional
+    table
+    tbody
+    tr
+    td
+    img {
     margin-right: 0;
     padding-right: 0;
   }
-  .price .price-container .profesional-container .profesional table tbody tr td p {
+  .price
+    .price-container
+    .profesional-container
+    .profesional
+    table
+    tbody
+    tr
+    td
+    p {
     margin-left: 0;
     padding-right: 0;
   }
@@ -1225,4 +1294,4 @@ footer .footer-wrap .sm-logos img {
   footer .sm-logos img {
     margin-right: 5%;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
