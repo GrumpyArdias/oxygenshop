@@ -1257,13 +1257,14 @@ footer {
     }
   }
   // FOURTH BLOCK OF CONTENT
-
-  //AQUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUI
   .price {
     .price-container {
       display: flex;
       flex-direction: row;
       margin-bottom: 5%;
+      max-width: 100%;
+      margin: 0 auto;
+      translate: 3%;
       .basic-container {
         display: flex;
         flex-direction: column;
