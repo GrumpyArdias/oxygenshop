@@ -5,10 +5,13 @@ const toTopAnchor = document.getElementById("anchor-to-top");
 const burguerIcon = document.getElementById("burguer-img");
 const NavMenu = document.getElementById("nav-menu");
 const formContact = document.getElementById("contact-form");
+const nhcForm = document.getElementById("newsletter-form");
 const errorDiv = document.getElementById("error-msg");
-const nchlBtn = document.getElementById("nwsl-btn");
+const nchlBtn = document.getElementById("nnewsletter-btn");
 const closeBtn = document.getElementById("close-Btn");
 const selectedCurrency = document.getElementById("currency");
+const sliderBttn = document.querySelectorAll("[data-slider-button]");
+const sliderDiv = document.getElementById("slider");
 
 const formData = {
   userName: document.getElementById("name"),
@@ -33,8 +36,10 @@ function dataValidations(event) {
   let mailRex =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-  console.log(formData);
-  if (formData.userName.length < 2 || formData.userName.length >= 100) {
+  if (
+    formData.userName.value.length < 2 ||
+    formData.userName.value.length >= 100
+  ) {
     errorMsg.push(
       "El nombre no puede ser menor de 2 caracteres ni mayor de 100"
     );
@@ -46,14 +51,7 @@ function dataValidations(event) {
     formData.userMail.style.borderColor = "#fc0303";
   }
 
-  if (
-    !formData.nchMail.value.match(mailRex || formData.nchMail.value !== null)
-  ) {
-    formData.nchMail.style.borderColor = "#fc0303";
-  }
-
   if (errorMsg.length > 0) {
-    event.preventDefault();
     errorDiv.innerHTML = errorMsg.join(", ");
     errorDiv.style.color = "#fc0303";
     return false;
@@ -164,18 +162,15 @@ burguerIcon.addEventListener("click", () => {
 
 // MODAL
 
-let modalHasPop = false;
+localStorage.setItem("modalHasPop", false);
 
 window.onload = function () {
-  console.log(`el estado del token es ${modalHasPop}`);
-  if (!modalHasPop) {
+  let modalHasPop = localStorage.getItem("modalHasPop");
+  if (!modalHasPop || modalHasPop === "false") {
     setTimeout(() => {
       document.getElementById("modal").style.display = "flex";
       document.body.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-      modalHasPop = true;
-      console.log(
-        `el estado del token despues de las funciones es ${modalHasPop}`
-      );
+      localStorage.setItem("modalHasPop", true);
     }, 5000);
 
     window.onscroll = () => {
@@ -185,10 +180,7 @@ window.onload = function () {
       ) {
         document.getElementById("modal").style.display = "flex";
         document.body.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-        modalHasPop = true;
-        console.log(
-          `el estado del token despues de las funciones es ${modalHasPop}`
-        );
+        localStorage.setItem("modalHasPop", true);
       }
     };
   }
@@ -197,13 +189,23 @@ window.onload = function () {
 // event listener
 
 formContact.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  console.log(dataValidations());
-
   if (dataValidations()) {
-    e.preventDefault();
     fetchHandel(formData.userName.value, formData.userMail.value, null);
+  }
+});
+
+// AQUI
+nhcForm.addEventListener("submit", (e) => {
+  let mailRex =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+  if (!formData.nchMail.value.match(mailRex)) {
+    console.log("error mail de newsletter");
+    formData.nchMail.style.borderColor = "#fc0303";
+  } else {
+    e.preventDefault();
+    fetchHandel(null, null, formData.nchMail.value);
+    closeModal();
   }
 });
 
@@ -226,10 +228,61 @@ closeBtn.addEventListener("click", (e) => {
   document.body.style.backgroundColor = "white";
 });
 
-// Currency exange
-
 selectedCurrency.addEventListener("change", async (e) => {
   const selectedOption = e.target.value;
   exchangeCalculations(selectedOption);
-  console.log(data);
 });
+
+class Slider {
+  constructor(sliderItem) {
+    this.sliderItem = sliderDiv;
+    this.intervalId = null;
+    this.intervalTime = 2500;
+    this.startAutoSlide();
+  }
+
+  sliders() {
+    sliderBttn.forEach((button) => {
+      button.addEventListener("click", () => {
+        const offset = button.dataset.sliderButton === "next" ? 1 : -1;
+        const slides = button
+          .closest("[data-slider]")
+          .querySelector("[data-slides]");
+
+        const activeSlide = slides.querySelector("[data-active]");
+        let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+
+        if (newIndex < 0) newIndex = slides.children.length - 1;
+        if (newIndex >= slides.children.length) newIndex = 0;
+
+        slides.children[newIndex].dataset.active = true;
+        delete activeSlide.dataset.active;
+      });
+    });
+  }
+
+  startAutoSlide() {
+    if (this.intervalId) return;
+
+    this.intervalId = setInterval(() => {
+      const slides = this.sliderItem.querySelector("[data-slides]");
+      console.log(slides);
+      const activeSlide = slides.querySelector("[data-active]");
+      let newIndex = [...slides.children].indexOf(activeSlide) + 1;
+
+      if (newIndex >= slides.children.length) newIndex = 0;
+
+      slides.children[newIndex].dataset.active = true;
+      delete activeSlide.dataset.active;
+    }, this.intervalTime);
+  }
+
+  stopAutoSlide() {
+    clearInterval(this.intervalId);
+    this.intervalId = null;
+  }
+}
+
+let slider = new Slider(sliderDiv);
+
+slider.sliders();
