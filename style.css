@@ -68,7 +68,11 @@ aside .modal #newsletter-container #newsletter-form button {
   top: 0;
   left: 0;
   height: 10px;
-  background: linear-gradient(to right, rgba(8, 166, 228, 0.6235294118), #08a6e4);
+  background: linear-gradient(
+    to right,
+    rgba(8, 166, 228, 0.6235294118),
+    #08a6e4
+  );
   width: 0%;
   z-index: 1000;
   transition: width 0.2s ease-out;
@@ -166,6 +170,7 @@ aside .modal #newsletter-container #newsletter-form button {
   margin: 5% auto;
 }
 .sales button {
+  display: block;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   font-weight: bold;
@@ -329,6 +334,7 @@ aside .modal #newsletter-container #newsletter-form button {
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
+  margin: 0 auto;
   margin-top: 10px;
   max-width: 325px;
 }
@@ -364,6 +370,9 @@ aside .modal #newsletter-container #newsletter-form button {
 .beneficts .alwaysFirst .img-wrap img {
   position: relative;
   transform: translate(-21%, 19%);
+}
+.beneficts .alwaysFirst .text-wrapper {
+  margin-left: 10%;
 }
 .beneficts .alwaysFirst .text-wrapper h3 {
   margin-top: 40px;
@@ -487,45 +496,45 @@ aside .modal #newsletter-container #newsletter-form button {
   flex-direction: row;
   justify-content: space-around;
   align-content: center;
-  max-width: 90%;
+  min-width: 92%;
   border: 1px solid #fb3b64;
   border-radius: 18px;
-  margin: 14px 10%;
+  margin-top: 10%;
 }
-.price .price-container .basic .text-price-wrapper {
+.price .price-container .basic-container .basic .text-price-wrapper {
   margin-top: 70px;
   margin-left: 10%;
 }
-.price .price-container .basic .text-price-wrapper h4 {
+.price .price-container .basic-container .basic .text-price-wrapper h4 {
   font-size: 20px;
   font-weight: 700;
   font-family: "Raleway", sans-serif;
   text-align: center;
   margin-bottom: -5px;
 }
-.price .price-container .basic .text-price-wrapper h2 {
+.price .price-container .basic-container .basic .text-price-wrapper h2 {
   font-size: 46px;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   color: #fb3b64;
   margin-bottom: 100px;
 }
-.price .price-container .basic table {
+.price .price-container .basic-container .basic table {
   margin-top: 25px;
   margin-right: 4%;
   margin-left: 20px;
   margin-bottom: 60px;
 }
-.price .price-container .basic table tbody {
+.price .price-container .basic-container .basic table tbody {
   margin-top: -10px;
 }
-.price .price-container .basic table tbody tr {
+.price .price-container .basic-container .basic table tbody tr {
   padding: 10px;
 }
-.price .price-container .basic table tbody tr td img {
+.price .price-container .basic-container .basic table tbody tr td img {
   padding-right: 10px;
 }
-.price .price-container .basic table tbody tr td p {
+.price .price-container .basic-container .basic table tbody tr td p {
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
   text-align: left;
@@ -546,7 +555,7 @@ aside .modal #newsletter-container #newsletter-form button {
   background-color: #eb476e;
   color: white;
   border: 0;
-  translate: 60% -80%;
+  translate: 47% -52%;
   position: relative;
 }
 .price .price-container .profesional-container {
@@ -584,11 +593,13 @@ aside .modal #newsletter-container #newsletter-form button {
   margin-bottom: 100px;
 }
 .price .price-container .profesional-container .profesional table {
+.price .price-container .profesional-container .profesional table {
   margin-top: 25px;
   margin-right: 4%;
   margin-left: 10px;
   margin-bottom: 60px;
 }
+.price .price-container .profesional-container .profesional table tbody {
 .price .price-container .profesional-container .profesional table tbody {
   margin-top: -10px;
 }
@@ -607,6 +618,7 @@ aside .modal #newsletter-container #newsletter-form button {
   scale: 120%;
   box-shadow: 0px 0px 10px rgba(7, 172, 230, 0.29);
 }
+.price .price-container .profesional-container .profesional-button {
 .price .price-container .profesional-container .profesional-button {
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
@@ -628,7 +640,7 @@ aside .modal #newsletter-container #newsletter-form button {
   flex-direction: row;
   justify-content: space-around;
   align-content: center;
-  max-width: 90%;
+  min-width: 96%;
   border: 1px solid #55dfb4;
   border-radius: 18px;
   margin: 14px 10%;
@@ -639,12 +651,14 @@ aside .modal #newsletter-container #newsletter-form button {
   margin-left: 10%;
 }
 .price .price-container .premium-container .premium .text-price-wrapper h4 {
+.price .price-container .premium-container .premium .text-price-wrapper h4 {
   font-size: 20px;
   font-weight: 700;
   font-family: "Raleway", sans-serif;
   text-align: center;
   margin-bottom: -5px;
 }
+.price .price-container .premium-container .premium .text-price-wrapper h2 {
 .price .price-container .premium-container .premium .text-price-wrapper h2 {
   font-size: 46px;
   font-family: "Open Sans", sans-serif;
@@ -656,11 +670,13 @@ aside .modal #newsletter-container #newsletter-form button {
   margin-right: -8%;
 }
 .price .price-container .premium-container .premium table {
+.price .price-container .premium-container .premium table {
   margin-top: 25px;
   margin-right: 4%;
   margin-left: 10px;
   margin-bottom: 60px;
 }
+.price .price-container .premium-container .premium table tbody {
 .price .price-container .premium-container .premium table tbody {
   margin-top: -10px;
 }
@@ -668,8 +684,10 @@ aside .modal #newsletter-container #newsletter-form button {
   padding: 5px;
 }
 .price .price-container .premium-container .premium table tbody tr td img {
+.price .price-container .premium-container .premium table tbody tr td img {
   padding-right: 10px;
 }
+.price .price-container .premium-container .premium table tbody tr td p {
 .price .price-container .premium-container .premium table tbody tr td p {
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
@@ -682,6 +700,7 @@ aside .modal #newsletter-container #newsletter-form button {
 .price .price-container .premium-container .premium-button {
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
+  min-width: 94%;
   font-weight: 700;
   line-height: 22px;
   min-width: 150px;
@@ -763,57 +782,53 @@ aside .modal #newsletter-container #newsletter-form button {
 .contact .questions-wrap h2 {
   font-size: 40px;
   font-family: "Raleway", sans-serif;
-  margin-left: 5%;
   font-weight: 400;
 }
-.contact .questions-wrap h4 {
+.contact .contact-container .questions-wrap h4 {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  margin-left: 5%;
   margin-bottom: 38px;
   margin-top: 5px;
 }
-.contact .questions-wrap .contact-data {
+.contact .contact-container .questions-wrap .contact-data {
   display: none;
 }
-.contact .questions-wrap table {
-  margin-left: 5%;
+.contact .contact-container .questions-wrap table {
+  margin: 0 auto;
 }
-.contact .questions-wrap table tr td {
+.contact .contact-container .questions-wrap table tr td {
   padding-left: 5px;
 }
-.contact .questions-wrap table tr td p {
+.contact .contact-container .questions-wrap table tr td p {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   font-size: 16px;
   color: #a5a5a5;
 }
-.contact form {
+.contact .contact-container form {
+  max-width: 90%;
+  margin: 0 auto;
   margin-top: 56px;
-  margin-left: 8%;
 }
-.contact form label {
+.contact .contact-container form label {
   color: #07ace6;
   font-family: "Open Sans", sans-serif;
   font-size: 11px;
   font-weight: 600;
 }
-.contact form input {
+.contact .contact-container form input {
   outline: 0;
   border-width: 0 0 1px;
   border-color: black;
   min-width: 90%;
   margin-bottom: 42px;
 }
-.contact form div {
+.contact .contact-container form div {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: row;
-  max-width: 90%;
 }
-.contact form div input {
+.contact .contact-container form div input {
   width: 15%;
   border-color: #fb3b64;
   min-width: 10%;
@@ -823,14 +838,14 @@ aside .modal #newsletter-container #newsletter-form button {
   accent-color: white;
   color: #08a6e4;
 }
-.contact form div p {
+.contact .contact-container form div p {
   font-size: 12px;
   font-weight: 400;
   font-family: "Open Sans", sans-serif;
-  text-align: left;
+  text-align: center;
   color: #707070;
 }
-.contact form button {
+.contact .contact-container form button {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   font-weight: bold;
@@ -862,12 +877,17 @@ aside .modal #newsletter-container #newsletter-form button {
 }
 
 footer {
-  display: flex;
-  flex-direction: row;
+  display: block;
+  margin: 0 auto;
   margin-top: 44px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
 }
-footer .footer-text {
+footer .footer-wrap {
+  display: flex;
+  flex-direction: row;
+}
+footer .footer-wrap .footer-text {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -875,27 +895,30 @@ footer .footer-text {
   justify-content: center;
   width: 70%;
 }
-footer .footer-text h1 {
+footer .footer-wrap .footer-text h1 {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
   font-size: 26px;
   color: #08a6e4;
   text-align: left;
 }
-footer .footer-text p {
+footer .footer-wrap .footer-text p {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 11px;
   color: #a5a5a5;
   text-align: left;
 }
-footer .sm-logos {
+footer .footer-wrap .sm-logos {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   min-height: 89px;
   width: 30%;
+}
+footer .footer-wrap .sm-logos img {
+  margin-left: 5%;
 }
 
 @media screen and (min-width: 1000px) {
@@ -1148,13 +1171,17 @@ footer .sm-logos {
     translate: 7% 55%;
     scale: 93%;
   }
+  .price {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
+  }
   .price .price-container {
     display: flex;
     flex-direction: row;
     margin-bottom: 5%;
     max-width: 100%;
-    margin: 0 auto;
-    translate: 3%;
+    translate: 5%;
   }
   .price .price-container .basic-container {
     display: flex;
@@ -1249,48 +1276,51 @@ footer .sm-logos {
   }
   .contact {
     min-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  .contact .contact-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
-  .contact .questions-wrap {
+  .contact .contact-container .questions-wrap {
     min-width: 40%;
     min-width: 35%;
     margin-top: 10%;
   }
-  .contact .questions-wrap h2 {
+  .contact .contact-container .questions-wrap h2 {
     font-size: 49px;
   }
-  .contact .questions-wrap h4 {
+  .contact .contact-container .questions-wrap h4 {
     margin-top: 3%;
     margin-bottom: 3%;
   }
-  .contact .questions-wrap .contact-data {
+  .contact .contact-container .questions-wrap .contact-data {
     margin-left: 3%;
     max-width: 50%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display: inline-block;
+    margin: 0 auto;
   }
-  .contact .questions-wrap .contact-data .mail {
+  .contact .contact-container .questions-wrap .contact-data .mail {
     display: flex;
     flex-direction: row;
     align-content: center;
   }
-  .contact .questions-wrap .contact-data .mail img {
+  .contact .contact-container .questions-wrap .contact-data .mail img {
     margin-right: 10px;
   }
-  .contact .questions-wrap .contact-data .phone {
+  .contact .contact-container .questions-wrap .contact-data .phone {
     display: flex;
     flex-direction: row;
   }
-  .contact .questions-wrap .contact-data .phone img {
+  .contact .contact-container .questions-wrap .contact-data .phone img {
     margin-right: 10px;
   }
-  .contact .questions-wrap table {
+  .contact .contact-container .questions-wrap table {
     display: none;
   }
-  .contact .contact-text {
+  .contact .contact-container .contact-text {
     max-width: 40%;
     margin-top: 7%;
   }
@@ -1304,16 +1334,17 @@ footer .sm-logos {
     margin-bottom: 5%;
     margin-top: 3%;
   }
-  .contact .contact-text form #email {
+  .contact .contact-container .contact-text form #email {
     margin-bottom: 5%;
     margin-top: 3%;
   }
-  .contact .contact-text .checkbox-wrap {
+  .contact .contact-container .contact-text .checkbox-wrap {
     flex-direction: row;
     justify-content: flex-start;
   }
-  .contact .contact-text .checkbox-wrap input {
+  .contact .contact-container .contact-text .checkbox-wrap input {
     margin-bottom: 0;
+    scale: 30%;
   }
   .contact .contact-text .checkbox-wrap p {
     text-align: justify;
@@ -1331,4 +1362,4 @@ footer .sm-logos {
   footer .sm-logos img {
     margin-right: 5%;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
