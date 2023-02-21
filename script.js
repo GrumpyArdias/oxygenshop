@@ -161,11 +161,10 @@ burguerIcon.addEventListener("click", () => {
 });
 
 // MODAL
-
+let modalHasPop = localStorage.getItem("modalHasPop");
 localStorage.setItem("modalHasPop", false);
 
 window.onload = function () {
-  let modalHasPop = localStorage.getItem("modalHasPop");
   if (!modalHasPop || modalHasPop === "false") {
     setTimeout(() => {
       document.getElementById("modal").style.display = "flex";
@@ -237,7 +236,7 @@ class Slider {
   constructor(sliderItem) {
     this.sliderItem = sliderDiv;
     this.intervalId = null;
-    this.intervalTime = 2500;
+    this.intervalTime = 5000;
     this.startAutoSlide();
   }
 
