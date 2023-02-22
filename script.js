@@ -161,11 +161,10 @@ burguerIcon.addEventListener("click", () => {
 });
 
 // MODAL
-let modalHasPop = localStorage.getItem("modalHasPop");
-localStorage.setItem("modalHasPop", false);
+//let modalHasPop = localStorage.getItem("modalHasPop");
 
 window.onload = function () {
-  if (!modalHasPop || modalHasPop === "false") {
+  if (!localStorage.getItem("modalHasPop")) {
     setTimeout(() => {
       document.getElementById("modal").style.display = "flex";
       document.body.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
@@ -174,7 +173,7 @@ window.onload = function () {
 
     window.onscroll = () => {
       if (
-        !modalHasPop &&
+        !localStorage.getItem("modalHasPop") &&
         window.pageYOffset > document.documentElement.scrollHeight * 0.25
       ) {
         document.getElementById("modal").style.display = "flex";

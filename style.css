@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: 1px solid greenyellow;
 }
 
 html {
@@ -510,25 +511,18 @@ aside .modal #newsletter-container #newsletter-form button {
   color: #fb3b64;
   margin-bottom: 100px;
 }
-.price .price-container .basic table {
-  margin-top: 25px;
-  margin-right: 4%;
-  margin-left: 20px;
-  margin-bottom: 60px;
+.price .price-container .basic .table-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
-.price .price-container .basic table tbody {
-  margin-top: -10px;
+.price .price-container .basic .table-container .table-data {
+  display: flex;
+  margin-bottom: 25px;
 }
-.price .price-container .basic table tbody tr {
-  padding: 10px;
-}
-.price .price-container .basic table tbody tr td img {
-  padding-right: 10px;
-}
-.price .price-container .basic table tbody tr td p {
-  font-size: 14px;
-  font-family: "Open Sans", sans-serif;
-  text-align: left;
+.price .price-container .basic .table-container .table-data .table-img {
+  margin-right: 5px;
 }
 .price .price-container .basic:hover {
   scale: 120%;
@@ -549,6 +543,10 @@ aside .modal #newsletter-container #newsletter-form button {
   translate: 60% -80%;
   position: relative;
 }
+.price .price-container .basic:hover + .basic-button {
+  scale: 120%;
+  translate: 0% 115%;
+}
 .price .price-container .profesional-container {
   margin-bottom: 10%;
 }
@@ -565,7 +563,7 @@ aside .modal #newsletter-container #newsletter-form button {
 }
 .price .price-container .profesional-container .profesional .text-price-wrapper {
   margin-top: 70px;
-  margin-left: 10%;
+  margin-left: 5%;
 }
 .price .price-container .profesional-container .profesional .text-price-wrapper h4 {
   font-size: 20px;
@@ -583,25 +581,19 @@ aside .modal #newsletter-container #newsletter-form button {
 .price .price-container .profesional-container .profesional .text-price-wrapper p {
   margin-bottom: 100px;
 }
-.price .price-container .profesional-container .profesional table {
-  margin-top: 25px;
-  margin-right: 4%;
+.price .price-container .profesional-container .profesional .table-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   margin-left: 10px;
-  margin-bottom: 60px;
 }
-.price .price-container .profesional-container .profesional table tbody {
-  margin-top: -10px;
+.price .price-container .profesional-container .profesional .table-container .table-data {
+  display: flex;
+  margin-bottom: 20px;
 }
-.price .price-container .profesional-container .profesional table tbody tr {
-  padding: 5px;
-}
-.price .price-container .profesional-container .profesional table tbody tr td img {
-  padding-right: 10px;
-}
-.price .price-container .profesional-container .profesional table tbody tr td p {
-  font-size: 14px;
-  font-family: "Open Sans", sans-serif;
-  text-align: left;
+.price .price-container .profesional-container .profesional .table-container .table-data .table-img {
+  margin-right: 5px;
 }
 .price .price-container .profesional-container .profesional:hover {
   scale: 120%;
@@ -622,6 +614,10 @@ aside .modal #newsletter-container #newsletter-form button {
   position: absolute;
   left: 50%;
   translate: -50% -80%;
+}
+.price .price-container .profesional-container .profesional:hover + .profesional-button {
+  scale: 120%;
+  translate: 0% 115%;
 }
 .price .price-container .premium-container .premium {
   display: flex;
@@ -655,25 +651,19 @@ aside .modal #newsletter-container #newsletter-form button {
   margin-bottom: 100px;
   margin-right: -8%;
 }
-.price .price-container .premium-container .premium table {
-  margin-top: 25px;
-  margin-right: 4%;
+.price .price-container .premium-container .premium .table-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   margin-left: 10px;
-  margin-bottom: 60px;
 }
-.price .price-container .premium-container .premium table tbody {
-  margin-top: -10px;
+.price .price-container .premium-container .premium .table-container .table-data {
+  display: flex;
+  margin-bottom: 20px;
 }
-.price .price-container .premium-container .premium table tbody tr {
-  padding: 5px;
-}
-.price .price-container .premium-container .premium table tbody tr td img {
-  padding-right: 10px;
-}
-.price .price-container .premium-container .premium table tbody tr td p {
-  font-size: 14px;
-  font-family: "Open Sans", sans-serif;
-  text-align: left;
+.price .price-container .premium-container .premium .table-container .table-data .table-img {
+  margin-right: 5px;
 }
 .price .price-container .premium-container .premium:hover {
   scale: 120%;
@@ -694,6 +684,10 @@ aside .modal #newsletter-container #newsletter-form button {
   position: absolute;
   left: 50%;
   translate: -50% -80%;
+}
+.price .price-container .premium-container .premium:hover + .premium-button {
+  scale: 120%;
+  translate: 0% 115%;
 }
 
 .slider-wrap {
@@ -1173,9 +1167,11 @@ footer .sm-logos {
   .price .price-container .basic-container .basic .text-price-wrapper {
     margin-bottom: -10%;
   }
-  .price .price-container .basic-container .basic table {
-    scale: 110%;
-    translate: 35%;
+  .price .price-container .basic-container .basic .table-container {
+    margin-bottom: 10px;
+  }
+  .price .price-container .basic-container .basic .table-container .table-data .table-img {
+    margin-right: 60px;
   }
   .price .price-container .basic-container .basic-button {
     position: relative;
@@ -1204,9 +1200,11 @@ footer .sm-logos {
   .price .price-container .profesional-container .profesional .text-price-wrapper h4 {
     margin-top: -9%;
   }
-  .price .price-container .profesional-container .profesional table {
-    scale: 110%;
-    translate: 35%;
+  .price .price-container .profesional-container .profesional .table-container {
+    margin-bottom: 10px;
+  }
+  .price .price-container .profesional-container .profesional .table-container .table-data .table-img {
+    margin-right: 60px;
   }
   .price .price-container .profesional-container .profesional-button {
     position: relative;
@@ -1236,9 +1234,11 @@ footer .sm-logos {
   .price .price-container .premium-container .premium .text-price-wrapper h4 {
     margin-top: -9%;
   }
-  .price .price-container .premium-container .premium table {
-    translate: 35%;
-    scale: 110%;
+  .price .price-container .premium-container .premium .table-container {
+    margin-bottom: 10px;
+  }
+  .price .price-container .premium-container .premium .table-container .table-data .table-img {
+    margin-right: 60px;
   }
   .price .price-container .premium-container .premium-button {
     position: relative;
