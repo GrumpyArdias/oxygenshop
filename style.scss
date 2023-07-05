@@ -183,7 +183,6 @@ aside {
   }
 
   button {
-    display: block;
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
     font-weight: bold;
@@ -362,7 +361,6 @@ aside {
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: 0 auto;
   margin-top: 10px;
   max-width: 325px;
   margin: 0 auto;
@@ -401,7 +399,6 @@ aside {
       }
     }
     .text-wrapper {
-      margin-left: 10%;
       h3 {
         margin-top: 40px;
         font-family: "Open Sans", sans-serif;
@@ -534,22 +531,19 @@ aside {
   }
 
   .price-container {
-    margin: 0 auto;
-    display: block;
-    .basic-container {
-      margin: 0 auto;
-      .basic {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-content: center;
-        min-width: 92%;
-        border: 1px solid #fb3b64;
-        border-radius: 18px;
-        margin-top: 10%;
-        .text-price-wrapper {
-          margin-top: 70px;
-          margin-left: 10%;
+    .basic {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-content: center;
+      max-width: 90%;
+      border: 1px solid #fb3b64;
+      border-radius: 18px;
+      margin: 14px 10%;
+
+      .text-price-wrapper {
+        margin-top: 70px;
+        margin-left: 10%;
 
         h4 {
           font-size: 20px;
@@ -834,42 +828,39 @@ aside {
 //  FIFTH CONTENT BLOCK
 
 .contact {
-  .contact-container {
-    display: block;
-    margin: 0 auto;
-    min-width: 100%;
-    .questions-wrap {
-      text-align: center;
-      h2 {
-        font-size: 40px;
-        font-family: "Raleway", sans-serif;
-        font-weight: 400;
-      }
-      h4 {
-        font-family: "Open Sans", sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        margin-bottom: 38px;
-        margin-top: 5px;
-      }
-      .contact-data {
-        display: none;
-      }
-      table {
-        margin: 0 auto;
-        tr {
-          td {
-            padding-left: 5px;
-            p {
-              font-family: "Open Sans", sans-serif;
-              font-weight: 600;
-              font-size: 16px;
-              color: #a5a5a5;
-            }
+  .questions-wrap {
+    h2 {
+      font-size: 40px;
+      font-family: "Raleway", sans-serif;
+      margin-left: 5%;
+      font-weight: 400;
+    }
+    h4 {
+      font-family: "Open Sans", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      margin-left: 5%;
+      margin-bottom: 38px;
+      margin-top: 5px;
+    }
+    .contact-data {
+      display: none;
+    }
+    table {
+      margin-left: 5%;
+      tr {
+        td {
+          padding-left: 5px;
+          p {
+            font-family: "Open Sans", sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            color: #a5a5a5;
           }
         }
       }
     }
+  }
 
   form {
     margin-top: 56px;
@@ -945,47 +936,39 @@ aside {
   color: white;
 }
 footer {
-  display: block;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
   margin-top: 44px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-  width: 100%;
-  .footer-wrap {
+  .footer-text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    h1 {
+      font-family: "Raleway", sans-serif;
+      font-weight: 300;
+      font-size: 26px;
+      color: #08a6e4;
+      text-align: left;
+    }
+    p {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      font-size: 11px;
+      color: #a5a5a5;
+      text-align: left;
+    }
+  }
+  .sm-logos {
     display: flex;
     flex-direction: row;
-    .footer-text {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      width: 70%;
-      h1 {
-        font-family: "Raleway", sans-serif;
-        font-weight: 300;
-        font-size: 26px;
-        color: #08a6e4;
-        text-align: left;
-      }
-      p {
-        font-family: "Open Sans", sans-serif;
-        font-weight: 400;
-        font-size: 11px;
-        color: #a5a5a5;
-        text-align: left;
-      }
-    }
-    .sm-logos {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      min-height: 89px;
-      width: 30%;
-      img {
-        margin-left: 5%;
-      }
-    }
+    justify-content: space-around;
+    align-items: center;
+    min-height: 89px;
+    width: 30%;
   }
 }
 
@@ -1271,9 +1254,6 @@ footer {
   }
   // FOURTH BLOCK OF CONTENT
   .price {
-    display: block;
-    margin: 0 auto;
-    max-width: 90%;
     .price-container {
       display: flex;
       flex-direction: row;
