@@ -363,6 +363,7 @@ aside {
   flex-wrap: wrap;
   margin-top: 10px;
   max-width: 325px;
+  margin: 0 auto;
 
   .alwaysFirst {
     display: flex;
@@ -403,6 +404,7 @@ aside {
         font-family: "Open Sans", sans-serif;
         text-align: left;
         font-weight: 400;
+        margin-left: 10px;
       }
       p {
         width: 84%;
@@ -410,6 +412,7 @@ aside {
         font-family: "Open Sans", sans-serif;
         font-size: 14px;
         margin-bottom: 30px;
+        margin-left: 10px;
       }
       .line {
         display: none;
@@ -574,7 +577,7 @@ aside {
       }
     }
     .basic:hover {
-      scale: 120%;
+      scale: 110%;
       box-shadow: 0px 0px 10px rgba(230, 7, 7, 0.29);
     }
     .basic-button {
@@ -589,12 +592,12 @@ aside {
       background-color: #eb476e;
       color: white;
       border: 0;
-      translate: 60% -80%;
+      translate: 80% -80%;
       position: relative;
     }
     .basic:hover + .basic-button {
-      scale: 120%;
-      translate: 0% 115%;
+      scale: 102%;
+      translate: 80% -50%;
     }
 
     .profesional-container {
@@ -649,7 +652,7 @@ aside {
         }
       }
       .profesional:hover {
-        scale: 120%;
+        scale: 102%;
         box-shadow: 0px 0px 10px rgba(7, 172, 230, 0.29);
       }
       .profesional-button {
@@ -669,8 +672,8 @@ aside {
         translate: -50% -80%;
       }
       .profesional:hover + .profesional-button {
-        scale: 120%;
-        translate: 0% 115%;
+        scale: 102%;
+        translate: -50% -80%;
       }
     }
 
@@ -726,7 +729,7 @@ aside {
         }
       }
       .premium:hover {
-        scale: 120%;
+        scale: 102%;
         box-shadow: 0px 0px 10px rgba(7, 230, 63, 0.29);
       }
       .premium-button {
@@ -746,8 +749,8 @@ aside {
         translate: -50% -80%;
       }
       .premium:hover + .premium-button {
-        scale: 120%;
-        translate: 0% 115%;
+        scale: 102%;
+        translate: -50% -80%;
       }
     }
   }
@@ -1044,9 +1047,9 @@ footer {
         font-size: 11px;
         font-weight: 700;
         letter-spacing: 3px;
+        gap: 10%;
 
         a {
-          margin-right: 15%;
           text-decoration: none;
         }
         a:link {
@@ -1196,6 +1199,9 @@ footer {
           min-height: 2px;
           max-width: 65%;
         }
+        p {
+          margin-left: 10px;
+        }
       }
     }
     .increase-recognition {
@@ -1262,6 +1268,7 @@ footer {
         align-items: center;
         justify-content: center;
         text-align: center;
+        margin-bottom: 0%;
 
         .basic {
           position: relative;
@@ -1269,8 +1276,13 @@ footer {
           flex-direction: column;
           align-items: center;
           min-width: 80%;
+          scale: 102%;
           .text-price-wrapper {
             margin-bottom: -10%;
+
+            h4 {
+              margin-top: -9%;
+            }
           }
           .table-container {
             margin-bottom: 10px;
@@ -1284,7 +1296,12 @@ footer {
         .basic-button {
           position: relative;
           top: -8%;
-          translate: 3%;
+          left: 0%;
+          translate: 0% 17%;
+        }
+        .basic:hover + .basic-button {
+          scale: 102%;
+          translate: 0% 17%;
         }
       }
 
@@ -1296,6 +1313,7 @@ footer {
         justify-content: center;
         text-align: center;
         margin-bottom: 0%;
+        scale: 102%;
 
         .profesional {
           position: relative;
@@ -1323,7 +1341,11 @@ footer {
           position: relative;
           top: -8%;
           left: 0%;
-          translate: 8% 0%;
+          translate: 0% 17%;
+        }
+        .profesional:hover + .profesional-button {
+          scale: 102%;
+          translate: 0% 17%;
         }
       }
 
@@ -1335,6 +1357,7 @@ footer {
         justify-content: center;
         text-align: center;
         margin-bottom: 0%;
+        scale: 102%;
 
         .premium {
           position: relative;
@@ -1362,7 +1385,11 @@ footer {
           position: relative;
           top: -8%;
           left: 0%;
-          translate: 8% 0%;
+          translate: 0% 17%;
+        }
+        .premium:hover + .premium-button {
+          scale: 102%;
+          translate: 0% 17%;
         }
       }
     }
@@ -1389,10 +1416,11 @@ footer {
       }
       .contact-data {
         margin-left: 3%;
-        max-width: 50%;
+
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+
+        gap: 10%;
         .mail {
           display: flex;
           flex-direction: row;
@@ -1404,6 +1432,7 @@ footer {
         .phone {
           display: flex;
           flex-direction: row;
+          min-width: 100%;
           img {
             margin-right: 10px;
           }
@@ -1456,6 +1485,7 @@ footer {
     }
     .sm-logos {
       justify-content: center;
+      gap: 10%;
       img {
         margin-right: 5%;
       }

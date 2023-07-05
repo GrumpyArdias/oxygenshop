@@ -331,6 +331,7 @@ aside .modal #newsletter-container #newsletter-form button {
   flex-wrap: wrap;
   margin-top: 10px;
   max-width: 325px;
+  margin: 0 auto;
 }
 .beneficts .alwaysFirst {
   display: flex;
@@ -370,6 +371,7 @@ aside .modal #newsletter-container #newsletter-form button {
   font-family: "Open Sans", sans-serif;
   text-align: left;
   font-weight: 400;
+  margin-left: 10px;
 }
 .beneficts .alwaysFirst .text-wrapper p {
   width: 84%;
@@ -377,6 +379,7 @@ aside .modal #newsletter-container #newsletter-form button {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   margin-bottom: 30px;
+  margin-left: 10px;
 }
 .beneficts .alwaysFirst .text-wrapper .line {
   display: none;
@@ -524,7 +527,7 @@ aside .modal #newsletter-container #newsletter-form button {
   margin-right: 5px;
 }
 .price .price-container .basic:hover {
-  scale: 120%;
+  scale: 110%;
   box-shadow: 0px 0px 10px rgba(230, 7, 7, 0.29);
 }
 .price .price-container .basic-button {
@@ -539,12 +542,12 @@ aside .modal #newsletter-container #newsletter-form button {
   background-color: #eb476e;
   color: white;
   border: 0;
-  translate: 60% -80%;
+  translate: 80% -80%;
   position: relative;
 }
 .price .price-container .basic:hover + .basic-button {
-  scale: 120%;
-  translate: 0% 115%;
+  scale: 102%;
+  translate: 80% -50%;
 }
 .price .price-container .profesional-container {
   margin-bottom: 10%;
@@ -595,7 +598,7 @@ aside .modal #newsletter-container #newsletter-form button {
   margin-right: 5px;
 }
 .price .price-container .profesional-container .profesional:hover {
-  scale: 120%;
+  scale: 102%;
   box-shadow: 0px 0px 10px rgba(7, 172, 230, 0.29);
 }
 .price .price-container .profesional-container .profesional-button {
@@ -615,8 +618,8 @@ aside .modal #newsletter-container #newsletter-form button {
   translate: -50% -80%;
 }
 .price .price-container .profesional-container .profesional:hover + .profesional-button {
-  scale: 120%;
-  translate: 0% 115%;
+  scale: 102%;
+  translate: -50% -80%;
 }
 .price .price-container .premium-container .premium {
   display: flex;
@@ -665,7 +668,7 @@ aside .modal #newsletter-container #newsletter-form button {
   margin-right: 5px;
 }
 .price .price-container .premium-container .premium:hover {
-  scale: 120%;
+  scale: 102%;
   box-shadow: 0px 0px 10px rgba(7, 230, 63, 0.29);
 }
 .price .price-container .premium-container .premium-button {
@@ -685,8 +688,8 @@ aside .modal #newsletter-container #newsletter-form button {
   translate: -50% -80%;
 }
 .price .price-container .premium-container .premium:hover + .premium-button {
-  scale: 120%;
-  translate: 0% 115%;
+  scale: 102%;
+  translate: -50% -80%;
 }
 
 .slider-wrap {
@@ -954,9 +957,9 @@ footer .sm-logos {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 3px;
+    gap: 10%;
   }
   .header-Wrap header .big-menu a {
-    margin-right: 15%;
     text-decoration: none;
   }
   .header-Wrap header .big-menu a:link {
@@ -1096,6 +1099,9 @@ footer .sm-logos {
     min-height: 2px;
     max-width: 65%;
   }
+  .beneficts .yourShop .text-wrap p {
+    margin-left: 10px;
+  }
   .beneficts .increase-recognition {
     flex-direction: row;
     justify-content: space-between;
@@ -1155,6 +1161,7 @@ footer .sm-logos {
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-bottom: 0%;
   }
   .price .price-container .basic-container .basic {
     position: relative;
@@ -1162,9 +1169,13 @@ footer .sm-logos {
     flex-direction: column;
     align-items: center;
     min-width: 80%;
+    scale: 102%;
   }
   .price .price-container .basic-container .basic .text-price-wrapper {
     margin-bottom: -10%;
+  }
+  .price .price-container .basic-container .basic .text-price-wrapper h4 {
+    margin-top: -9%;
   }
   .price .price-container .basic-container .basic .table-container {
     margin-bottom: 10px;
@@ -1175,7 +1186,12 @@ footer .sm-logos {
   .price .price-container .basic-container .basic-button {
     position: relative;
     top: -8%;
-    translate: 3%;
+    left: 0%;
+    translate: 0% 17%;
+  }
+  .price .price-container .basic-container .basic:hover + .basic-button {
+    scale: 102%;
+    translate: 0% 17%;
   }
   .price .price-container .profesional-container {
     display: flex;
@@ -1185,6 +1201,7 @@ footer .sm-logos {
     justify-content: center;
     text-align: center;
     margin-bottom: 0%;
+    scale: 102%;
   }
   .price .price-container .profesional-container .profesional {
     position: relative;
@@ -1209,7 +1226,11 @@ footer .sm-logos {
     position: relative;
     top: -8%;
     left: 0%;
-    translate: 8% 0%;
+    translate: 0% 17%;
+  }
+  .price .price-container .profesional-container .profesional:hover + .profesional-button {
+    scale: 102%;
+    translate: 0% 17%;
   }
   .price .price-container .premium-container {
     display: flex;
@@ -1219,6 +1240,7 @@ footer .sm-logos {
     justify-content: center;
     text-align: center;
     margin-bottom: 0%;
+    scale: 102%;
   }
   .price .price-container .premium-container .premium {
     position: relative;
@@ -1243,7 +1265,11 @@ footer .sm-logos {
     position: relative;
     top: -8%;
     left: 0%;
-    translate: 8% 0%;
+    translate: 0% 17%;
+  }
+  .price .price-container .premium-container .premium:hover + .premium-button {
+    scale: 102%;
+    translate: 0% 17%;
   }
   .contact {
     min-width: 100%;
@@ -1265,10 +1291,9 @@ footer .sm-logos {
   }
   .contact .questions-wrap .contact-data {
     margin-left: 3%;
-    max-width: 50%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    gap: 10%;
   }
   .contact .questions-wrap .contact-data .mail {
     display: flex;
@@ -1281,6 +1306,7 @@ footer .sm-logos {
   .contact .questions-wrap .contact-data .phone {
     display: flex;
     flex-direction: row;
+    min-width: 100%;
   }
   .contact .questions-wrap .contact-data .phone img {
     margin-right: 10px;
@@ -1325,8 +1351,11 @@ footer .sm-logos {
   }
   footer .sm-logos {
     justify-content: center;
+    gap: 10%;
   }
   footer .sm-logos img {
     margin-right: 5%;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
