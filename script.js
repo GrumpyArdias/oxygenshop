@@ -12,7 +12,8 @@ const closeBtn = document.getElementById("close-Btn");
 const selectedCurrency = document.getElementById("currency");
 const sliderBttn = document.querySelectorAll("[data-slider-button]");
 const sliderDiv = document.getElementById("slider");
-
+const h2Modal = document.getElementById("h2Modal");
+const subscribeModal = document.getElementById("subscribe");
 const formData = {
   userName: document.getElementById("name"),
   userMail: document.getElementById("email"),
@@ -187,8 +188,13 @@ window.onload = function () {
 // event listener
 
 formContact.addEventListener("submit", (e) => {
+  e.preventDefault();
   if (dataValidations()) {
     fetchHandel(formData.userName.value, formData.userMail.value, null);
+    document.getElementById("modal").style.display = "flex";
+    document.body.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+    h2Modal.innerText = "Thank you! We Will reach to you!";
+    subscribeModal.style.display = "none";
   }
 });
 
@@ -264,7 +270,7 @@ class Slider {
 
     this.intervalId = setInterval(() => {
       const slides = this.sliderItem.querySelector("[data-slides]");
-      console.log(slides);
+
       const activeSlide = slides.querySelector("[data-active]");
       let newIndex = [...slides.children].indexOf(activeSlide) + 1;
 

@@ -10,11 +10,13 @@ html {
 body {
   font-family: "Raleway", "Open Sans", sans-serif;
   min-width: 320px;
+  position: relative;
 }
 
 // MODAL
 
 aside {
+  scale: 53%;
   .modal {
     display: none;
     position: fixed;

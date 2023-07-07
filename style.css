@@ -11,11 +11,16 @@ html {
 body {
   font-family: "Raleway", "Open Sans", sans-serif;
   min-width: 320px;
+  position: relative;
 }
 
+aside {
+  position: fixed;
+  z-index: 100000000000;
+}
 aside .modal {
   display: none;
-  position: fixed;
+  max-width: 300px;
   flex-direction: row-reverse;
   flex-wrap: wrap;
   top: 50vh;
@@ -68,7 +73,11 @@ aside .modal #newsletter-container #newsletter-form button {
   top: 0;
   left: 0;
   height: 10px;
-  background: linear-gradient(to right, rgba(8, 166, 228, 0.6235294118), #08a6e4);
+  background: linear-gradient(
+    to right,
+    rgba(8, 166, 228, 0.6235294118),
+    #08a6e4
+  );
   width: 0%;
   z-index: 1000;
   transition: width 0.2s ease-out;
@@ -563,24 +572,43 @@ aside .modal #newsletter-container #newsletter-form button {
   margin: 14px 10%;
   position: relative;
 }
-.price .price-container .profesional-container .profesional .text-price-wrapper {
+.price
+  .price-container
+  .profesional-container
+  .profesional
+  .text-price-wrapper {
   margin-top: 70px;
   margin-left: 5%;
 }
-.price .price-container .profesional-container .profesional .text-price-wrapper h4 {
+.price
+  .price-container
+  .profesional-container
+  .profesional
+  .text-price-wrapper
+  h4 {
   font-size: 20px;
   font-weight: 700;
   font-family: "Raleway", sans-serif;
   text-align: center;
   margin-bottom: -5px;
 }
-.price .price-container .profesional-container .profesional .text-price-wrapper h2 {
+.price
+  .price-container
+  .profesional-container
+  .profesional
+  .text-price-wrapper
+  h2 {
   font-size: 46px;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   color: #07ace6;
 }
-.price .price-container .profesional-container .profesional .text-price-wrapper p {
+.price
+  .price-container
+  .profesional-container
+  .profesional
+  .text-price-wrapper
+  p {
   margin-bottom: 100px;
 }
 .price .price-container .profesional-container .profesional .table-container {
@@ -590,11 +618,22 @@ aside .modal #newsletter-container #newsletter-form button {
   align-content: center;
   margin-left: 10px;
 }
-.price .price-container .profesional-container .profesional .table-container .table-data {
+.price
+  .price-container
+  .profesional-container
+  .profesional
+  .table-container
+  .table-data {
   display: flex;
   margin-bottom: 20px;
 }
-.price .price-container .profesional-container .profesional .table-container .table-data .table-img {
+.price
+  .price-container
+  .profesional-container
+  .profesional
+  .table-container
+  .table-data
+  .table-img {
   margin-right: 5px;
 }
 .price .price-container .profesional-container .profesional:hover {
@@ -617,7 +656,11 @@ aside .modal #newsletter-container #newsletter-form button {
   left: 50%;
   translate: -50% -80%;
 }
-.price .price-container .profesional-container .profesional:hover + .profesional-button {
+.price
+  .price-container
+  .profesional-container
+  .profesional:hover
+  + .profesional-button {
   scale: 102%;
   translate: -50% -80%;
 }
@@ -660,11 +703,22 @@ aside .modal #newsletter-container #newsletter-form button {
   align-content: center;
   margin-left: 10px;
 }
-.price .price-container .premium-container .premium .table-container .table-data {
+.price
+  .price-container
+  .premium-container
+  .premium
+  .table-container
+  .table-data {
   display: flex;
   margin-bottom: 20px;
 }
-.price .price-container .premium-container .premium .table-container .table-data .table-img {
+.price
+  .price-container
+  .premium-container
+  .premium
+  .table-container
+  .table-data
+  .table-img {
   margin-right: 5px;
 }
 .price .price-container .premium-container .premium:hover {
@@ -1180,7 +1234,13 @@ footer .sm-logos {
   .price .price-container .basic-container .basic .table-container {
     margin-bottom: 10px;
   }
-  .price .price-container .basic-container .basic .table-container .table-data .table-img {
+  .price
+    .price-container
+    .basic-container
+    .basic
+    .table-container
+    .table-data
+    .table-img {
     margin-right: 60px;
   }
   .price .price-container .basic-container .basic-button {
@@ -1210,16 +1270,31 @@ footer .sm-logos {
     align-items: center;
     min-width: 80%;
   }
-  .price .price-container .profesional-container .profesional .text-price-wrapper {
+  .price
+    .price-container
+    .profesional-container
+    .profesional
+    .text-price-wrapper {
     margin-bottom: -10%;
   }
-  .price .price-container .profesional-container .profesional .text-price-wrapper h4 {
+  .price
+    .price-container
+    .profesional-container
+    .profesional
+    .text-price-wrapper
+    h4 {
     margin-top: -9%;
   }
   .price .price-container .profesional-container .profesional .table-container {
     margin-bottom: 10px;
   }
-  .price .price-container .profesional-container .profesional .table-container .table-data .table-img {
+  .price
+    .price-container
+    .profesional-container
+    .profesional
+    .table-container
+    .table-data
+    .table-img {
     margin-right: 60px;
   }
   .price .price-container .profesional-container .profesional-button {
@@ -1228,7 +1303,11 @@ footer .sm-logos {
     left: 0%;
     translate: 0% 17%;
   }
-  .price .price-container .profesional-container .profesional:hover + .profesional-button {
+  .price
+    .price-container
+    .profesional-container
+    .profesional:hover
+    + .profesional-button {
     scale: 102%;
     translate: 0% 17%;
   }
@@ -1258,7 +1337,13 @@ footer .sm-logos {
   .price .price-container .premium-container .premium .table-container {
     margin-bottom: 10px;
   }
-  .price .price-container .premium-container .premium .table-container .table-data .table-img {
+  .price
+    .price-container
+    .premium-container
+    .premium
+    .table-container
+    .table-data
+    .table-img {
     margin-right: 60px;
   }
   .price .price-container .premium-container .premium-button {
